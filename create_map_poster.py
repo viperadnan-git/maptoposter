@@ -479,6 +479,82 @@ def fetch_features(point, dist, tags, name) -> GeoDataFrame | None:
         return None
 
 
+def _render_text_labels(ax, point, display_city, display_country, width, height, fonts):
+    """
+    Draw city/country/coordinates/attribution text on the poster.
+
+    Text rendering is isolated in this helper so create_poster can cleanly skip
+    it (and the associated font loading) when --no-text is requested.
+    """
+    # Scale text for portrait/landscape orientations using smaller dimension
+    scale_factor = min(height, width) / 12.0
+    base_main, base_sub, base_coords, base_attr = 60, 22, 14, 8
+
+    active_fonts = fonts or FONTS
+    if active_fonts:
+        font_sub = FontProperties(
+            fname=active_fonts["light"], size=base_sub * scale_factor
+        )
+        font_coords = FontProperties(
+            fname=active_fonts["regular"], size=base_coords * scale_factor
+        )
+    else:
+        font_sub = FontProperties(
+            family="monospace", weight="normal", size=base_sub * scale_factor
+        )
+        font_coords = FontProperties(
+            family="monospace", size=base_coords * scale_factor
+        )
+
+    # Latin scripts: uppercase with letter spacing (e.g., "P  A  R  I  S")
+    # Non-Latin scripts (CJK, Thai, Arabic, etc.): preserve original form
+    if is_latin_script(display_city):
+        spaced_city = "  ".join(list(display_city.upper()))
+    else:
+        spaced_city = display_city
+
+    # Shrink main font for long city names to prevent truncation
+    base_adjusted_main = base_main * scale_factor
+    if len(display_city) > 10:
+        length_factor = 10 / len(display_city)
+        adjusted_font_size = max(base_adjusted_main * length_factor, 10 * scale_factor)
+    else:
+        adjusted_font_size = base_adjusted_main
+
+    if active_fonts:
+        font_main = FontProperties(fname=active_fonts["bold"], size=adjusted_font_size)
+    else:
+        font_main = FontProperties(
+            family="monospace", weight="bold", size=adjusted_font_size
+        )
+
+    # --- BOTTOM TEXT ---
+    ax.text(0.5, 0.14, spaced_city, transform=ax.transAxes, color=THEME["text"],
+            ha="center", fontproperties=font_main, zorder=11)
+    ax.text(0.5, 0.10, display_country.upper(), transform=ax.transAxes,
+            color=THEME["text"], ha="center", fontproperties=font_sub, zorder=11)
+
+    lat, lon = point
+    ns = "N" if lat >= 0 else "S"
+    ew = "E" if lon >= 0 else "W"
+    coords = f"{abs(lat):.4f}° {ns} / {abs(lon):.4f}° {ew}"
+    ax.text(0.5, 0.07, coords, transform=ax.transAxes, color=THEME["text"],
+            alpha=0.7, ha="center", fontproperties=font_coords, zorder=11)
+
+    ax.plot([0.4, 0.6], [0.125, 0.125], transform=ax.transAxes,
+            color=THEME["text"], linewidth=1 * scale_factor, zorder=11)
+
+    # --- ATTRIBUTION (bottom right) ---
+    font_attr = FontProperties(
+        fname=FONTS["light"] if FONTS else None,
+        family=None if FONTS else "monospace",
+        size=base_attr,
+    )
+    ax.text(0.98, 0.02, "© OpenStreetMap contributors", transform=ax.transAxes,
+            color=THEME["text"], alpha=0.5, ha="right", va="bottom",
+            fontproperties=font_attr, zorder=11)
+
+
 def create_poster(
     city,
     country,
@@ -493,6 +569,7 @@ def create_poster(
     display_city=None,
     display_country=None,
     fonts=None,
+    no_text=False,
 ):
     """
     Generate a complete map poster with roads, water, parks, and typography.
@@ -511,6 +588,7 @@ def create_poster(
         height: Poster height in inches (default: 16)
         country_label: Optional override for country text on poster
         _name_label: Optional override for city name (unused, reserved for future use)
+        no_text: If True, skip all text labels and attribution for a clean map
 
     Raises:
         RuntimeError: If street network data cannot be retrieved
@@ -615,142 +693,10 @@ def create_poster(
     create_gradient_fade(ax, THEME['gradient_color'], location='bottom', zorder=10)
     create_gradient_fade(ax, THEME['gradient_color'], location='top', zorder=10)
 
-    # Calculate scale factor based on smaller dimension (reference 12 inches)
-    # This ensures text scales properly for both portrait and landscape orientations
-    scale_factor = min(height, width) / 12.0
-
-    # Base font sizes (at 12 inches width)
-    base_main = 60
-    base_sub = 22
-    base_coords = 14
-    base_attr = 8
-
-    # 4. Typography - use custom fonts if provided, otherwise use default FONTS
-    active_fonts = fonts or FONTS
-    if active_fonts:
-        # font_main is calculated dynamically later based on length
-        font_sub = FontProperties(
-            fname=active_fonts["light"], size=base_sub * scale_factor
+    if not no_text:
+        _render_text_labels(
+            ax, point, display_city, display_country, width, height, fonts
         )
-        font_coords = FontProperties(
-            fname=active_fonts["regular"], size=base_coords * scale_factor
-        )
-        font_attr = FontProperties(
-            fname=active_fonts["light"], size=base_attr * scale_factor
-        )
-    else:
-        # Fallback to system fonts
-        font_sub = FontProperties(
-            family="monospace", weight="normal", size=base_sub * scale_factor
-        )
-        font_coords = FontProperties(
-            family="monospace", size=base_coords * scale_factor
-        )
-        font_attr = FontProperties(family="monospace", size=base_attr * scale_factor)
-
-    # Format city name based on script type
-    # Latin scripts: apply uppercase and letter spacing for aesthetic
-    # Non-Latin scripts (CJK, Thai, Arabic, etc.): no spacing, preserve case structure
-    if is_latin_script(display_city):
-        # Latin script: uppercase with letter spacing (e.g., "P  A  R  I  S")
-        spaced_city = "  ".join(list(display_city.upper()))
-    else:
-        # Non-Latin script: no spacing, no forced uppercase
-        # For scripts like Arabic, Thai, Japanese, etc.
-        spaced_city = display_city
-
-    # Dynamically adjust font size based on city name length to prevent truncation
-    # We use the already scaled "main" font size as the starting point.
-    base_adjusted_main = base_main * scale_factor
-    city_char_count = len(display_city)
-
-    # Heuristic: If length is > 10, start reducing.
-    if city_char_count > 10:
-        length_factor = 10 / city_char_count
-        adjusted_font_size = max(base_adjusted_main * length_factor, 10 * scale_factor)
-    else:
-        adjusted_font_size = base_adjusted_main
-
-    if active_fonts:
-        font_main_adjusted = FontProperties(
-            fname=active_fonts["bold"], size=adjusted_font_size
-        )
-    else:
-        font_main_adjusted = FontProperties(
-            family="monospace", weight="bold", size=adjusted_font_size
-        )
-
-    # --- BOTTOM TEXT ---
-    ax.text(
-        0.5,
-        0.14,
-        spaced_city,
-        transform=ax.transAxes,
-        color=THEME["text"],
-        ha="center",
-        fontproperties=font_main_adjusted,
-        zorder=11,
-    )
-
-    ax.text(
-        0.5,
-        0.10,
-        display_country.upper(),
-        transform=ax.transAxes,
-        color=THEME["text"],
-        ha="center",
-        fontproperties=font_sub,
-        zorder=11,
-    )
-
-    lat, lon = point
-    coords = (
-        f"{lat:.4f}° N / {lon:.4f}° E"
-        if lat >= 0
-        else f"{abs(lat):.4f}° S / {lon:.4f}° E"
-    )
-    if lon < 0:
-        coords = coords.replace("E", "W")
-
-    ax.text(
-        0.5,
-        0.07,
-        coords,
-        transform=ax.transAxes,
-        color=THEME["text"],
-        alpha=0.7,
-        ha="center",
-        fontproperties=font_coords,
-        zorder=11,
-    )
-
-    ax.plot(
-        [0.4, 0.6],
-        [0.125, 0.125],
-        transform=ax.transAxes,
-        color=THEME["text"],
-        linewidth=1 * scale_factor,
-        zorder=11,
-    )
-
-    # --- ATTRIBUTION (bottom right) ---
-    if FONTS:
-        font_attr = FontProperties(fname=FONTS["light"], size=8)
-    else:
-        font_attr = FontProperties(family="monospace", size=8)
-
-    ax.text(
-        0.98,
-        0.02,
-        "© OpenStreetMap contributors",
-        transform=ax.transAxes,
-        color=THEME["text"],
-        alpha=0.5,
-        ha="right",
-        va="bottom",
-        fontproperties=font_attr,
-        zorder=11,
-    )
 
     # 5. Save
     print(f"Saving to {output_file}...")
@@ -932,6 +878,11 @@ Examples:
         "--list-themes", action="store_true", help="List all available themes"
     )
     parser.add_argument(
+        "--no-text",
+        action="store_true",
+        help="Render the map without city/country/coordinate/attribution labels",
+    )
+    parser.add_argument(
         "--display-city",
         "-dc",
         type=str,
@@ -1037,6 +988,7 @@ Examples:
                 display_city=args.display_city,
                 display_country=args.display_country,
                 fonts=custom_fonts,
+                no_text=args.no_text,
             )
 
         print("\n" + "=" * 50)
