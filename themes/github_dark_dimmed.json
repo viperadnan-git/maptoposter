@@ -1,0 +1,15 @@
+{
+  "name": "GitHub Dark Dimmed",
+  "description": "GitHub's easy-on-the-eyes dimmed variant - muted blue/yellow on slate",
+  "bg": "#22272E",
+  "text": "#ADBAC7",
+  "gradient_color": "#22272E",
+  "water": "#2D333B",
+  "parks": "#373E47",
+  "road_motorway": "#F47067",
+  "road_primary": "#DBAB0A",
+  "road_secondary": "#539BF5",
+  "road_tertiary": "#8DDB8C",
+  "road_residential": "#444C56",
+  "road_default": "#768390"
+}

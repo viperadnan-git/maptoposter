@@ -1,0 +1,15 @@
+{
+  "name": "City Lights",
+  "description": "Metropolitan nightscape - cool teal and warm amber on urban blue-grey",
+  "bg": "#1D252C",
+  "text": "#B7C5D3",
+  "gradient_color": "#1D252C",
+  "water": "#242E38",
+  "parks": "#2B3540",
+  "road_motorway": "#70E1E8",
+  "road_primary": "#ECC48D",
+  "road_secondary": "#5EC4FF",
+  "road_tertiary": "#E27E8D",
+  "road_residential": "#3B4956",
+  "road_default": "#718CA1"
+}

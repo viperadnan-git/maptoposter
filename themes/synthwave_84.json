@@ -1,0 +1,15 @@
+{
+  "name": "Synthwave '84",
+  "description": "Retrowave neon dreams - electric pink and cyan on deep violet",
+  "bg": "#241B2F",
+  "text": "#FF7EDB",
+  "gradient_color": "#241B2F",
+  "water": "#2C2340",
+  "parks": "#2A1D3A",
+  "road_motorway": "#F97E72",
+  "road_primary": "#FF7EDB",
+  "road_secondary": "#FEDE5D",
+  "road_tertiary": "#72F1B8",
+  "road_residential": "#495495",
+  "road_default": "#6D4A8C"
+}

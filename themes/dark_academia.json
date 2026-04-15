@@ -1,0 +1,15 @@
+{
+  "name": "Dark Academia",
+  "description": "Old library at midnight - burgundy and aged parchment on ink black",
+  "bg": "#14100D",
+  "text": "#E8DCC0",
+  "gradient_color": "#14100D",
+  "water": "#1A1410",
+  "parks": "#1F1A12",
+  "road_motorway": "#8B2E2E",
+  "road_primary": "#B88C5E",
+  "road_secondary": "#C4A46A",
+  "road_tertiary": "#5E4B2C",
+  "road_residential": "#302218",
+  "road_default": "#5E4B2C"
+}

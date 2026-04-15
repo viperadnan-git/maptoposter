@@ -1,0 +1,15 @@
+{
+  "name": "Oxocarbon",
+  "description": "IBM-inspired Carbon Design - magenta, purple and cyan on neutral black",
+  "bg": "#161616",
+  "text": "#F2F4F8",
+  "gradient_color": "#161616",
+  "water": "#1C1C1C",
+  "parks": "#222222",
+  "road_motorway": "#FF7EB6",
+  "road_primary": "#BE95FF",
+  "road_secondary": "#3DDBD9",
+  "road_tertiary": "#82CFFF",
+  "road_residential": "#393939",
+  "road_default": "#525252"
+}

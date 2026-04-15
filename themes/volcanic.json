@@ -1,0 +1,15 @@
+{
+  "name": "Volcanic",
+  "description": "Obsidian and magma - molten orange veins on cooled lava-black",
+  "bg": "#0A0705",
+  "text": "#FF6B2B",
+  "gradient_color": "#0A0705",
+  "water": "#120806",
+  "parks": "#1A0E0A",
+  "road_motorway": "#FF3800",
+  "road_primary": "#FF6B2B",
+  "road_secondary": "#FFAA00",
+  "road_tertiary": "#C43A18",
+  "road_residential": "#5C1A0E",
+  "road_default": "#8A2D1A"
+}

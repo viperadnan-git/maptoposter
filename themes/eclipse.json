@@ -1,0 +1,15 @@
+{
+  "name": "Eclipse",
+  "description": "Solar totality - luminous corona halo on absolute umbra shadow",
+  "bg": "#050507",
+  "text": "#F5E6B5",
+  "gradient_color": "#050507",
+  "water": "#0A0A0C",
+  "parks": "#0F0F10",
+  "road_motorway": "#F5E6B5",
+  "road_primary": "#D8BF70",
+  "road_secondary": "#9A8048",
+  "road_tertiary": "#605028",
+  "road_residential": "#2C2414",
+  "road_default": "#605028"
+}

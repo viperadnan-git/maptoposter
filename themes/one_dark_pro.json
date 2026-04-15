@@ -1,0 +1,15 @@
+{
+  "name": "One Dark Pro",
+  "description": "Atom One Dark - muted red/blue/purple on charcoal slate",
+  "bg": "#282C34",
+  "text": "#ABB2BF",
+  "gradient_color": "#282C34",
+  "water": "#2E333D",
+  "parks": "#353B45",
+  "road_motorway": "#E06C75",
+  "road_primary": "#D19A66",
+  "road_secondary": "#61AFEF",
+  "road_tertiary": "#C678DD",
+  "road_residential": "#3E4451",
+  "road_default": "#5C6370"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Aurora Borealis",
+  "description": "Northern lights - dancing green and violet on polar midnight",
+  "bg": "#0A1525",
+  "text": "#5FD0A6",
+  "gradient_color": "#0A1525",
+  "water": "#0D1C30",
+  "parks": "#12263B",
+  "road_motorway": "#5FD0A6",
+  "road_primary": "#8AE9D4",
+  "road_secondary": "#A89EEA",
+  "road_tertiary": "#4B8F94",
+  "road_residential": "#1A3045",
+  "road_default": "#4A6275"
+}

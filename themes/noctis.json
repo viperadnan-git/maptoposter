@@ -1,0 +1,15 @@
+{
+  "name": "Noctis",
+  "description": "Ethereal night - crisp green accents on petrol-deep teal",
+  "bg": "#052428",
+  "text": "#B2CCD6",
+  "gradient_color": "#052428",
+  "water": "#062F33",
+  "parks": "#0A3A3E",
+  "road_motorway": "#49E9A6",
+  "road_primary": "#E6D994",
+  "road_secondary": "#72B7D6",
+  "road_tertiary": "#D67E5C",
+  "road_residential": "#0F484E",
+  "road_default": "#507580"
+}

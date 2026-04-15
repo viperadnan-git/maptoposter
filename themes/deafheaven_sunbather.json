@@ -1,0 +1,15 @@
+{
+  "name": "Deafheaven Sunbather",
+  "description": "Blackgaze bliss - vivid soft pink sunshine bleeding across pitch black",
+  "bg": "#0B0508",
+  "text": "#FFB3D9",
+  "gradient_color": "#0B0508",
+  "water": "#120810",
+  "parks": "#180C14",
+  "road_motorway": "#FF8AC1",
+  "road_primary": "#FFB3D9",
+  "road_secondary": "#C06E93",
+  "road_tertiary": "#7E445F",
+  "road_residential": "#40232F",
+  "road_default": "#7E445F"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Dune",
+  "description": "Arrakis at dusk - spice orange on deep indigo sand-shadow",
+  "bg": "#1C1028",
+  "text": "#F5A33C",
+  "gradient_color": "#1C1028",
+  "water": "#231638",
+  "parks": "#2A1F24",
+  "road_motorway": "#F5A33C",
+  "road_primary": "#D97A28",
+  "road_secondary": "#E8C27A",
+  "road_tertiary": "#8C5E3C",
+  "road_residential": "#473050",
+  "road_default": "#725A66"
+}

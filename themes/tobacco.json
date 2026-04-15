@@ -1,0 +1,15 @@
+{
+  "name": "Tobacco",
+  "description": "Smoky cigar lounge - cured golden tobacco leaves on humidor walnut",
+  "bg": "#1A120B",
+  "text": "#C4A175",
+  "gradient_color": "#1A120B",
+  "water": "#1E1610",
+  "parks": "#241B12",
+  "road_motorway": "#C4A175",
+  "road_primary": "#A48557",
+  "road_secondary": "#785E3A",
+  "road_tertiary": "#533F25",
+  "road_residential": "#2B1F14",
+  "road_default": "#533F25"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Ghost in the Shell",
+  "description": "Section 9 teal cyberbrain with neon magenta interface accents",
+  "bg": "#0A1418",
+  "text": "#4DD0E1",
+  "gradient_color": "#0A1418",
+  "water": "#0D1A20",
+  "parks": "#10222A",
+  "road_motorway": "#FF2E9F",
+  "road_primary": "#4DD0E1",
+  "road_secondary": "#80DEEA",
+  "road_tertiary": "#2A8A9A",
+  "road_residential": "#162F38",
+  "road_default": "#1F5964"
+}

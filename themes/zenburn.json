@@ -1,0 +1,15 @@
+{
+  "name": "Zenburn",
+  "description": "Low-contrast classic - pastel olive and pink on calm medium grey",
+  "bg": "#3F3F3F",
+  "text": "#DCDCCC",
+  "gradient_color": "#3F3F3F",
+  "water": "#4F4F4F",
+  "parks": "#4A4F48",
+  "road_motorway": "#DCA3A3",
+  "road_primary": "#DFDFBF",
+  "road_secondary": "#7F9F7F",
+  "road_tertiary": "#8CD0D3",
+  "road_residential": "#6F6F6F",
+  "road_default": "#8A8A8A"
+}

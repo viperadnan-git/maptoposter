@@ -1,0 +1,15 @@
+{
+  "name": "Kubrick 2001",
+  "description": "HAL 9000 eye crimson on Discovery cyan and deep space void",
+  "bg": "#02060D",
+  "text": "#FF1818",
+  "gradient_color": "#02060D",
+  "water": "#050C14",
+  "parks": "#0A141E",
+  "road_motorway": "#FF1818",
+  "road_primary": "#E8E8E8",
+  "road_secondary": "#4AA0C4",
+  "road_tertiary": "#2E6A80",
+  "road_residential": "#142838",
+  "road_default": "#2E6A80"
+}

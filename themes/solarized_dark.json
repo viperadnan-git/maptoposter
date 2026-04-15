@@ -1,0 +1,15 @@
+{
+  "name": "Solarized Dark",
+  "description": "Ethan Schoonover's precision dark palette - muted hues on deep cyan base",
+  "bg": "#002B36",
+  "text": "#839496",
+  "gradient_color": "#002B36",
+  "water": "#073642",
+  "parks": "#1E3A2A",
+  "road_motorway": "#B58900",
+  "road_primary": "#CB4B16",
+  "road_secondary": "#268BD2",
+  "road_tertiary": "#2AA198",
+  "road_residential": "#586E75",
+  "road_default": "#657B83"
+}

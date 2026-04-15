@@ -1,0 +1,15 @@
+{
+  "name": "Westworld",
+  "description": "Delos frontier - dusty gold and crimson blood on ink black",
+  "bg": "#141010",
+  "text": "#E0C088",
+  "gradient_color": "#141010",
+  "water": "#1A1512",
+  "parks": "#1F1A14",
+  "road_motorway": "#A02828",
+  "road_primary": "#E0C088",
+  "road_secondary": "#C99958",
+  "road_tertiary": "#8B6B3C",
+  "road_residential": "#4A3A28",
+  "road_default": "#6B5538"
+}

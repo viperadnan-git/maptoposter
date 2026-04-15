@@ -1,0 +1,15 @@
+{
+  "name": "Winter Is Coming",
+  "description": "Frost and snowfall - icy blue highlights on deep slate",
+  "bg": "#011423",
+  "text": "#E3F2FD",
+  "gradient_color": "#011423",
+  "water": "#022132",
+  "parks": "#0A2A3E",
+  "road_motorway": "#61CDFF",
+  "road_primary": "#7DA9F0",
+  "road_secondary": "#C5CBE0",
+  "road_tertiary": "#4A89C1",
+  "road_residential": "#16365B",
+  "road_default": "#4A6D99"
+}

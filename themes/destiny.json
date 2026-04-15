@@ -1,0 +1,15 @@
+{
+  "name": "Destiny",
+  "description": "Guardian subclass trinity - solar orange, arc blue, void violet on deep space",
+  "bg": "#0B0F1A",
+  "text": "#EBEBEB",
+  "gradient_color": "#0B0F1A",
+  "water": "#121826",
+  "parks": "#182030",
+  "road_motorway": "#F2A93B",
+  "road_primary": "#7CCFFC",
+  "road_secondary": "#9F7BE0",
+  "road_tertiary": "#5A7FA8",
+  "road_residential": "#2E3A52",
+  "road_default": "#5A7FA8"
+}

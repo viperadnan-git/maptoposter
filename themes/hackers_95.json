@@ -1,0 +1,15 @@
+{
+  "name": "Hackers '95",
+  "description": "90s cyberpunk movie aesthetic - rainbow neon on deep violet-black",
+  "bg": "#0A0020",
+  "text": "#00FFFF",
+  "gradient_color": "#0A0020",
+  "water": "#100830",
+  "parks": "#150828",
+  "road_motorway": "#FF00FF",
+  "road_primary": "#00FFFF",
+  "road_secondary": "#39FF14",
+  "road_tertiary": "#FFFF00",
+  "road_residential": "#5A2B80",
+  "road_default": "#7A4DA8"
+}

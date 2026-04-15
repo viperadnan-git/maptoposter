@@ -1,0 +1,15 @@
+{
+  "name": "Dark Side of the Moon",
+  "description": "Pink Floyd prism - full visible spectrum refracting on pyramid black",
+  "bg": "#000000",
+  "text": "#FFFFFF",
+  "gradient_color": "#000000",
+  "water": "#050510",
+  "parks": "#0A0A12",
+  "road_motorway": "#EC2127",
+  "road_primary": "#F58220",
+  "road_secondary": "#FFF400",
+  "road_tertiary": "#00A651",
+  "road_residential": "#2E3192",
+  "road_default": "#92278F"
+}

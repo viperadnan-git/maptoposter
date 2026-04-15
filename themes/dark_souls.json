@@ -1,0 +1,15 @@
+{
+  "name": "Dark Souls",
+  "description": "Bonfire ember glow on ashen stone and worn bronze",
+  "bg": "#1B1A17",
+  "text": "#F4EFDE",
+  "gradient_color": "#1B1A17",
+  "water": "#1F1E1A",
+  "parks": "#242220",
+  "road_motorway": "#C96F28",
+  "road_primary": "#A78A6D",
+  "road_secondary": "#695442",
+  "road_tertiary": "#4A3E30",
+  "road_residential": "#38322B",
+  "road_default": "#695442"
+}

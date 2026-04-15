@@ -1,0 +1,15 @@
+{
+  "name": "Black Hole",
+  "description": "Event horizon - accretion disk orange bleeding into absolute void",
+  "bg": "#000000",
+  "text": "#FF8A00",
+  "gradient_color": "#000000",
+  "water": "#030200",
+  "parks": "#080400",
+  "road_motorway": "#FFB347",
+  "road_primary": "#FF8A00",
+  "road_secondary": "#C45E00",
+  "road_tertiary": "#7A3A00",
+  "road_residential": "#3A1C00",
+  "road_default": "#7A3A00"
+}

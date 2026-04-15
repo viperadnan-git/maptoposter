@@ -1,0 +1,15 @@
+{
+  "name": "Kill Bill",
+  "description": "The Bride's yellow tracksuit on Crazy 88 ink black",
+  "bg": "#0D0A03",
+  "text": "#FFE500",
+  "gradient_color": "#0D0A03",
+  "water": "#14110A",
+  "parks": "#18140A",
+  "road_motorway": "#FFE500",
+  "road_primary": "#F5D800",
+  "road_secondary": "#B8A000",
+  "road_tertiary": "#7A6B00",
+  "road_residential": "#3D3500",
+  "road_default": "#7A6B00"
+}

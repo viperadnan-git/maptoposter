@@ -1,0 +1,15 @@
+{
+  "name": "Shades of Purple",
+  "description": "Bold signature yellow and pink on deep royal purple",
+  "bg": "#1E1E3F",
+  "text": "#FAD000",
+  "gradient_color": "#1E1E3F",
+  "water": "#2A2A5A",
+  "parks": "#2D2B55",
+  "road_motorway": "#FAD000",
+  "road_primary": "#FF628C",
+  "road_secondary": "#A599E9",
+  "road_tertiary": "#9EFFFF",
+  "road_residential": "#4D21FC",
+  "road_default": "#6943FF"
+}

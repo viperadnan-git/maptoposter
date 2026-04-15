@@ -1,0 +1,15 @@
+{
+  "name": "Coral Reef",
+  "description": "Living coral and tropical teal on deep reef blue - warm-cool complementary",
+  "bg": "#0B2028",
+  "text": "#FF8B78",
+  "gradient_color": "#0B2028",
+  "water": "#0D2632",
+  "parks": "#10303A",
+  "road_motorway": "#FF8B78",
+  "road_primary": "#FFC09A",
+  "road_secondary": "#4CD4CF",
+  "road_tertiary": "#2A8A92",
+  "road_residential": "#153842",
+  "road_default": "#2A8A92"
+}

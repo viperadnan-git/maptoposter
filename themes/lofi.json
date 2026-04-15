@@ -1,0 +1,15 @@
+{
+  "name": "Lofi",
+  "description": "Lofi study beats - warm peach and sage pastels on dusky plum",
+  "bg": "#1E1A2C",
+  "text": "#F2C6A0",
+  "gradient_color": "#1E1A2C",
+  "water": "#231E33",
+  "parks": "#2A2438",
+  "road_motorway": "#F2C6A0",
+  "road_primary": "#C79FEF",
+  "road_secondary": "#8DA9C4",
+  "road_tertiary": "#9EBD8D",
+  "road_residential": "#423955",
+  "road_default": "#625878"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Typewriter",
+  "description": "Journalist's desk - paper cream on deep ink with red ribbon accents",
+  "bg": "#0E1014",
+  "text": "#E8E1D0",
+  "gradient_color": "#0E1014",
+  "water": "#12141A",
+  "parks": "#161820",
+  "road_motorway": "#C93A3A",
+  "road_primary": "#E8E1D0",
+  "road_secondary": "#8F897C",
+  "road_tertiary": "#5A5550",
+  "road_residential": "#2E2C28",
+  "road_default": "#5A5550"
+}

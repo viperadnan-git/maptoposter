@@ -1,0 +1,15 @@
+{
+  "name": "Gruvbox Dark",
+  "description": "Retro groove warm dark palette - burnt oranges and yellows on dark mocha",
+  "bg": "#282828",
+  "text": "#EBDBB2",
+  "gradient_color": "#282828",
+  "water": "#2F3A38",
+  "parks": "#3A4A2E",
+  "road_motorway": "#FE8019",
+  "road_primary": "#D65D0E",
+  "road_secondary": "#FABD2F",
+  "road_tertiary": "#A89984",
+  "road_residential": "#665C54",
+  "road_default": "#7C6F64"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Teenage Engineering",
+  "description": "OP-1 inspired playful industrial - cream base with color-coded encoder accents",
+  "bg": "#E8E4DE",
+  "text": "#1A1A1A",
+  "gradient_color": "#E8E4DE",
+  "water": "#C3CDD4",
+  "parks": "#CFE3D6",
+  "road_motorway": "#CE2021",
+  "road_primary": "#FFC003",
+  "road_secondary": "#1270B8",
+  "road_tertiary": "#1AA167",
+  "road_residential": "#BDBDBD",
+  "road_default": "#888888"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Akira",
+  "description": "Kaneda's bike red streaking through pitch-black Neo-Tokyo",
+  "bg": "#0D0008",
+  "text": "#E52525",
+  "gradient_color": "#0D0008",
+  "water": "#140B12",
+  "parks": "#151010",
+  "road_motorway": "#E52525",
+  "road_primary": "#FF4A4A",
+  "road_secondary": "#FFD036",
+  "road_tertiary": "#8E2021",
+  "road_residential": "#3A0F0F",
+  "road_default": "#6B1818"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Drive",
+  "description": "Refn's LA night - hot pink script with scorpion gold on midnight violet",
+  "bg": "#0E0A1A",
+  "text": "#FF4FAE",
+  "gradient_color": "#0E0A1A",
+  "water": "#120D20",
+  "parks": "#17122B",
+  "road_motorway": "#FF4FAE",
+  "road_primary": "#D7B25C",
+  "road_secondary": "#6857A0",
+  "road_tertiary": "#3E3163",
+  "road_residential": "#201837",
+  "road_default": "#3E3163"
+}

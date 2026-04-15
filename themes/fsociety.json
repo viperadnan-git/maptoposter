@@ -1,0 +1,15 @@
+{
+  "name": "fsociety",
+  "description": "Mr. Robot hacker collective - revolutionary magenta on crypto-dark",
+  "bg": "#0A0A0D",
+  "text": "#FA0463",
+  "gradient_color": "#0A0A0D",
+  "water": "#100F18",
+  "parks": "#171220",
+  "road_motorway": "#FA0463",
+  "road_primary": "#F7267B",
+  "road_secondary": "#9F4AA3",
+  "road_tertiary": "#700440",
+  "road_residential": "#3C2C64",
+  "road_default": "#700440"
+}

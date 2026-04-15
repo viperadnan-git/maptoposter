@@ -1,0 +1,15 @@
+{
+  "name": "Dracula",
+  "description": "Classic Dracula palette - purple, pink, cyan on charcoal background",
+  "bg": "#282a36",
+  "text": "#ff79c6",
+  "gradient_color": "#282a36",
+  "water": "#44475a",
+  "parks": "#2f4a3a",
+  "road_motorway": "#ff79c6",
+  "road_primary": "#bd93f9",
+  "road_secondary": "#8be9fd",
+  "road_tertiary": "#ffb86c",
+  "road_residential": "#6272a4",
+  "road_default": "#6272a4"
+}

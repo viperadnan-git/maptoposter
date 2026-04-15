@@ -1,0 +1,15 @@
+{
+  "name": "Cyberpunk 2077",
+  "description": "Night City - electric yellow and cyan on crimson-tinged black",
+  "bg": "#0D0D14",
+  "text": "#FCEE0A",
+  "gradient_color": "#0D0D14",
+  "water": "#12121F",
+  "parks": "#181828",
+  "road_motorway": "#FCEE0A",
+  "road_primary": "#00F0FF",
+  "road_secondary": "#FF003C",
+  "road_tertiary": "#FF00E6",
+  "road_residential": "#3D304A",
+  "road_default": "#5A466A"
+}

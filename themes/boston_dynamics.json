@@ -1,0 +1,15 @@
+{
+  "name": "Boston Dynamics",
+  "description": "Industrial robotics - safety-hazard yellow on warehouse dark",
+  "bg": "#141618",
+  "text": "#FFCC00",
+  "gradient_color": "#141618",
+  "water": "#191B1D",
+  "parks": "#1E2023",
+  "road_motorway": "#FFCC00",
+  "road_primary": "#E8E8E8",
+  "road_secondary": "#878787",
+  "road_tertiary": "#505050",
+  "road_residential": "#2A2D30",
+  "road_default": "#505050"
+}

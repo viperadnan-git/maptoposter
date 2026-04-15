@@ -1,0 +1,15 @@
+{
+  "name": "Claude Code",
+  "description": "Anthropic-inspired warm dark terminal - Crail orange on deep neutral",
+  "bg": "#1A1715",
+  "text": "#D97757",
+  "gradient_color": "#1A1715",
+  "water": "#100E0C",
+  "parks": "#1F1B18",
+  "road_motorway": "#F4A462",
+  "road_primary": "#D97757",
+  "road_secondary": "#B45E3A",
+  "road_tertiary": "#8B4226",
+  "road_residential": "#5C2F1C",
+  "road_default": "#8B4226"
+}

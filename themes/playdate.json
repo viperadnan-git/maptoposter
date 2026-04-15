@@ -1,0 +1,15 @@
+{
+  "name": "Playdate",
+  "description": "Panic Playdate handheld - matte sunshine yellow on pocket-console black",
+  "bg": "#0A0A07",
+  "text": "#FFC526",
+  "gradient_color": "#0A0A07",
+  "water": "#10100A",
+  "parks": "#18180D",
+  "road_motorway": "#FFC526",
+  "road_primary": "#D99E00",
+  "road_secondary": "#A07500",
+  "road_tertiary": "#6B4E00",
+  "road_residential": "#332400",
+  "road_default": "#6B4E00"
+}

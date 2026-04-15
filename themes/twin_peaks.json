@@ -1,0 +1,15 @@
+{
+  "name": "Twin Peaks",
+  "description": "Red Room velvet curtain with coffee amber on Black Lodge void",
+  "bg": "#0A0608",
+  "text": "#C41E3A",
+  "gradient_color": "#0A0608",
+  "water": "#10080A",
+  "parks": "#15100C",
+  "road_motorway": "#C41E3A",
+  "road_primary": "#E8E3D8",
+  "road_secondary": "#8B6630",
+  "road_tertiary": "#523D28",
+  "road_residential": "#261E18",
+  "road_default": "#523D28"
+}

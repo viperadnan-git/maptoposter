@@ -1,0 +1,15 @@
+{
+  "name": "Oil Slick",
+  "description": "Iridescent petroleum sheen - shifting chartreuse, pink and cyan on puddle black",
+  "bg": "#050505",
+  "text": "#C4E85A",
+  "gradient_color": "#050505",
+  "water": "#080812",
+  "parks": "#0A1008",
+  "road_motorway": "#C4E85A",
+  "road_primary": "#E85AC4",
+  "road_secondary": "#5AC4E8",
+  "road_tertiary": "#7F5CD9",
+  "road_residential": "#1F1A2A",
+  "road_default": "#4A3D5E"
+}

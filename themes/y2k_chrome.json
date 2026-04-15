@@ -1,0 +1,15 @@
+{
+  "name": "Y2K Chrome",
+  "description": "Early-2000s bubblegum chrome - icy blue, silver and pink on deep graphite",
+  "bg": "#0F0F14",
+  "text": "#D4E4F7",
+  "gradient_color": "#0F0F14",
+  "water": "#141420",
+  "parks": "#1A1A28",
+  "road_motorway": "#C0C8D8",
+  "road_primary": "#8FD7F7",
+  "road_secondary": "#FFA6E0",
+  "road_tertiary": "#9CA0B2",
+  "road_residential": "#3A3E4E",
+  "road_default": "#5A6175"
+}

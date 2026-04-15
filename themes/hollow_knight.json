@@ -1,0 +1,15 @@
+{
+  "name": "Hollow Knight",
+  "description": "Hallownest deep cavern - pale ghost blue on abyss shadow",
+  "bg": "#0A1220",
+  "text": "#C0D6EA",
+  "gradient_color": "#0A1220",
+  "water": "#0E1828",
+  "parks": "#121E2E",
+  "road_motorway": "#C0D6EA",
+  "road_primary": "#7896C0",
+  "road_secondary": "#4E6E8F",
+  "road_tertiary": "#354F6E",
+  "road_residential": "#1E2E42",
+  "road_default": "#354F6E"
+}

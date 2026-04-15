@@ -1,0 +1,15 @@
+{
+  "name": "Memphis Dark",
+  "description": "Sottsass at midnight - playful pastel squiggles on deep indigo",
+  "bg": "#16143A",
+  "text": "#FFE066",
+  "gradient_color": "#16143A",
+  "water": "#1B1948",
+  "parks": "#201E54",
+  "road_motorway": "#FF6B9D",
+  "road_primary": "#60D4B8",
+  "road_secondary": "#FFE066",
+  "road_tertiary": "#9C7DFF",
+  "road_residential": "#2E2A6F",
+  "road_default": "#4C478B"
+}

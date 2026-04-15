@@ -1,0 +1,15 @@
+{
+  "name": "Rust Belt",
+  "description": "Post-industrial decay - oxidized iron orange on weathered concrete",
+  "bg": "#1A1917",
+  "text": "#C85E28",
+  "gradient_color": "#1A1917",
+  "water": "#1D1C1A",
+  "parks": "#20201D",
+  "road_motorway": "#C85E28",
+  "road_primary": "#8B8683",
+  "road_secondary": "#5C5753",
+  "road_tertiary": "#3E3A36",
+  "road_residential": "#262320",
+  "road_default": "#3E3A36"
+}

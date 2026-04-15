@@ -1,0 +1,15 @@
+{
+  "name": "GTA",
+  "description": "Grand Theft Auto pause-menu paper map - aged cream with bold black ink roads",
+  "bg": "#E8DCC4",
+  "text": "#1A1A1A",
+  "gradient_color": "#E8DCC4",
+  "water": "#7BA3BD",
+  "parks": "#B5B88A",
+  "road_motorway": "#1A1A1A",
+  "road_primary": "#2E2E2E",
+  "road_secondary": "#4A4A4A",
+  "road_tertiary": "#6B6B6B",
+  "road_residential": "#938D7C",
+  "road_default": "#4A4A4A"
+}

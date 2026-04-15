@@ -1,0 +1,15 @@
+{
+  "name": "Notion",
+  "description": "Notion dark mode - warm near-black with off-white workspace tones",
+  "bg": "#191919",
+  "text": "#D4D4D4",
+  "gradient_color": "#191919",
+  "water": "#1F1F1F",
+  "parks": "#252525",
+  "road_motorway": "#E4E4E4",
+  "road_primary": "#BEBEBE",
+  "road_secondary": "#858585",
+  "road_tertiary": "#5E5E5E",
+  "road_residential": "#373737",
+  "road_default": "#5E5E5E"
+}

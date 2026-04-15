@@ -1,0 +1,15 @@
+{
+  "name": "Vaporwave",
+  "description": "Aesthetic 90s - dreamy pink, aqua and lavender on plum dusk",
+  "bg": "#140F1F",
+  "text": "#FF71CE",
+  "gradient_color": "#140F1F",
+  "water": "#1D1733",
+  "parks": "#221A3A",
+  "road_motorway": "#FF71CE",
+  "road_primary": "#01CDFE",
+  "road_secondary": "#B967FF",
+  "road_tertiary": "#05FFA1",
+  "road_residential": "#3D2B63",
+  "road_default": "#5B4494"
+}

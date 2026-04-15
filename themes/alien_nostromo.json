@@ -1,0 +1,15 @@
+{
+  "name": "Alien Nostromo",
+  "description": "Ship MU/TH/UR computer - terminal green with warning-red alerts",
+  "bg": "#060806",
+  "text": "#39FF14",
+  "gradient_color": "#060806",
+  "water": "#0A1410",
+  "parks": "#0D1812",
+  "road_motorway": "#FF2B2B",
+  "road_primary": "#39FF14",
+  "road_secondary": "#66FF66",
+  "road_tertiary": "#2B6F3B",
+  "road_residential": "#1B3A20",
+  "road_default": "#2B6F3B"
+}

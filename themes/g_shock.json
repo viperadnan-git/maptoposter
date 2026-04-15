@@ -1,0 +1,15 @@
+{
+  "name": "G-Shock",
+  "description": "Casio tactical - LCD red with amber and brushed metal on rugged black",
+  "bg": "#0C0C0C",
+  "text": "#FF3333",
+  "gradient_color": "#0C0C0C",
+  "water": "#111111",
+  "parks": "#161616",
+  "road_motorway": "#FF3333",
+  "road_primary": "#E89D36",
+  "road_secondary": "#9A9A9A",
+  "road_tertiary": "#5C5C5C",
+  "road_residential": "#2A2A2A",
+  "road_default": "#5C5C5C"
+}

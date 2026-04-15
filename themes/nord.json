@@ -1,0 +1,15 @@
+{
+  "name": "Nord",
+  "description": "Arctic north-bluish palette - polar night base with frost accents",
+  "bg": "#2E3440",
+  "text": "#D8DEE9",
+  "gradient_color": "#2E3440",
+  "water": "#353E4C",
+  "parks": "#3A4735",
+  "road_motorway": "#88C0D0",
+  "road_primary": "#81A1C1",
+  "road_secondary": "#5E81AC",
+  "road_tertiary": "#4C566A",
+  "road_residential": "#434C5E",
+  "road_default": "#4C566A"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Porsche Gulf",
+  "description": "Gulf Oil Le Mans livery - powder blue and orange on racing night",
+  "bg": "#0E1220",
+  "text": "#53A0D0",
+  "gradient_color": "#0E1220",
+  "water": "#121628",
+  "parks": "#161A30",
+  "road_motorway": "#FF6D1F",
+  "road_primary": "#53A0D0",
+  "road_secondary": "#3A8AB8",
+  "road_tertiary": "#2A6589",
+  "road_residential": "#14253A",
+  "road_default": "#2A6589"
+}

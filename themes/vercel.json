@@ -1,0 +1,15 @@
+{
+  "name": "Vercel",
+  "description": "Pure black canvas with stark white type - minimalist deploy aesthetic",
+  "bg": "#000000",
+  "text": "#FFFFFF",
+  "gradient_color": "#000000",
+  "water": "#0A0A0A",
+  "parks": "#111111",
+  "road_motorway": "#FFFFFF",
+  "road_primary": "#EAEAEA",
+  "road_secondary": "#A1A1A1",
+  "road_tertiary": "#666666",
+  "road_residential": "#333333",
+  "road_default": "#666666"
+}

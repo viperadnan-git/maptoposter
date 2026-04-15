@@ -1,0 +1,15 @@
+{
+  "name": "Railway",
+  "description": "Railway deploy aesthetic - soft violet on deep cosmic background",
+  "bg": "#13111C",
+  "text": "#C4B6FF",
+  "gradient_color": "#13111C",
+  "water": "#1A1628",
+  "parks": "#211B30",
+  "road_motorway": "#C4B6FF",
+  "road_primary": "#7E5BFF",
+  "road_secondary": "#61E5D6",
+  "road_tertiary": "#5B4C8A",
+  "road_residential": "#2F2942",
+  "road_default": "#5B4C8A"
+}

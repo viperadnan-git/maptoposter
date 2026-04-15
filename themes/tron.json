@@ -1,0 +1,15 @@
+{
+  "name": "Tron",
+  "description": "Tron Legacy grid - electric cyan circuitry on pure black",
+  "bg": "#000000",
+  "text": "#7DFDFE",
+  "gradient_color": "#000000",
+  "water": "#050D14",
+  "parks": "#081219",
+  "road_motorway": "#7DFDFE",
+  "road_primary": "#0EF8F8",
+  "road_secondary": "#00A3E0",
+  "road_tertiary": "#0A6680",
+  "road_residential": "#0A3040",
+  "road_default": "#0A6680"
+}

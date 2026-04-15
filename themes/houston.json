@@ -1,0 +1,15 @@
+{
+  "name": "Houston",
+  "description": "Space-inspired - mission mint and cadet purple on deep cosmos blue",
+  "bg": "#0C1028",
+  "text": "#9FE8D4",
+  "gradient_color": "#0C1028",
+  "water": "#101538",
+  "parks": "#141A40",
+  "road_motorway": "#9FE8D4",
+  "road_primary": "#A89EEA",
+  "road_secondary": "#6FCADB",
+  "road_tertiary": "#4A5B9C",
+  "road_residential": "#1E254F",
+  "road_default": "#4A5B9C"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Blade Runner 2049",
+  "description": "Deakins dystopia - amber haze and teal shadows on ashen dark",
+  "bg": "#1A1410",
+  "text": "#F5A561",
+  "gradient_color": "#1A1410",
+  "water": "#0E1518",
+  "parks": "#1C1C15",
+  "road_motorway": "#F5A561",
+  "road_primary": "#C97B3A",
+  "road_secondary": "#7A8E8B",
+  "road_tertiary": "#5C5046",
+  "road_residential": "#3A3228",
+  "road_default": "#5C5046"
+}

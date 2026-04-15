@@ -1,0 +1,15 @@
+{
+  "name": "Nebula",
+  "description": "Cosmic dust cloud - pink, purple and blue stellar nursery on deep space",
+  "bg": "#0B051F",
+  "text": "#E87BD0",
+  "gradient_color": "#0B051F",
+  "water": "#100828",
+  "parks": "#150C30",
+  "road_motorway": "#E87BD0",
+  "road_primary": "#8A5CE0",
+  "road_secondary": "#5E8FE8",
+  "road_tertiary": "#4A4090",
+  "road_residential": "#22194E",
+  "road_default": "#4A4090"
+}

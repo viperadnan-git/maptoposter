@@ -1,0 +1,15 @@
+{
+  "name": "Amber CRT",
+  "description": "Vintage amber phosphor monitor - warm mustard glow on near-black",
+  "bg": "#0D0803",
+  "text": "#FFBF00",
+  "gradient_color": "#0D0803",
+  "water": "#1A1008",
+  "parks": "#1C1205",
+  "road_motorway": "#FFBF00",
+  "road_primary": "#FFAA00",
+  "road_secondary": "#E59400",
+  "road_tertiary": "#B87200",
+  "road_residential": "#6B4200",
+  "road_default": "#B87200"
+}

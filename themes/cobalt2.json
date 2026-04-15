@@ -1,0 +1,15 @@
+{
+  "name": "Cobalt2",
+  "description": "Wes Bos signature - electric yellow and cyan on deep cobalt blue",
+  "bg": "#193549",
+  "text": "#FFC600",
+  "gradient_color": "#193549",
+  "water": "#1F4662",
+  "parks": "#15232D",
+  "road_motorway": "#FFC600",
+  "road_primary": "#FF9D00",
+  "road_secondary": "#9EFFFF",
+  "road_tertiary": "#FF628C",
+  "road_residential": "#0D3A58",
+  "road_default": "#4D8EAB"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Outrun",
+  "description": "80s retrofuturist sunset - hot pink and sunset orange on indigo",
+  "bg": "#1A0C2E",
+  "text": "#FF2A6D",
+  "gradient_color": "#1A0C2E",
+  "water": "#221340",
+  "parks": "#2A1A4A",
+  "road_motorway": "#FF2A6D",
+  "road_primary": "#F9A03F",
+  "road_secondary": "#FCEE09",
+  "road_tertiary": "#05D9E8",
+  "road_residential": "#542E8C",
+  "road_default": "#7A4BB5"
+}

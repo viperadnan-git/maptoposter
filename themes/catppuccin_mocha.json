@@ -1,0 +1,15 @@
+{
+  "name": "Catppuccin Mocha",
+  "description": "Soothing pastel dark palette - mauve, pink and sapphire on base plum",
+  "bg": "#1E1E2E",
+  "text": "#F5C2E7",
+  "gradient_color": "#1E1E2E",
+  "water": "#26293C",
+  "parks": "#2A3A30",
+  "road_motorway": "#CBA6F7",
+  "road_primary": "#F5C2E7",
+  "road_secondary": "#89B4FA",
+  "road_tertiary": "#74C7EC",
+  "road_residential": "#45475A",
+  "road_default": "#585B70"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Google Maps Night",
+  "description": "Official Google Maps night-mode styling - slate background with warm amber labels",
+  "bg": "#242F3E",
+  "text": "#D59563",
+  "gradient_color": "#242F3E",
+  "water": "#17263C",
+  "parks": "#263C3F",
+  "road_motorway": "#8A7949",
+  "road_primary": "#746855",
+  "road_secondary": "#555F6F",
+  "road_tertiary": "#434D5D",
+  "road_residential": "#38414E",
+  "road_default": "#475066"
+}

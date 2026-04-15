@@ -1,0 +1,15 @@
+{
+  "name": "Tokyo Night",
+  "description": "Downtown Tokyo at night - deep indigo base with neon purple and cyan roads",
+  "bg": "#1A1B26",
+  "text": "#C0CAF5",
+  "gradient_color": "#1A1B26",
+  "water": "#232740",
+  "parks": "#2D4B3E",
+  "road_motorway": "#BB9AF7",
+  "road_primary": "#7AA2F7",
+  "road_secondary": "#7DCFFF",
+  "road_tertiary": "#565F89",
+  "road_residential": "#414868",
+  "road_default": "#565F89"
+}

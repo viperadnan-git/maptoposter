@@ -1,0 +1,15 @@
+{
+  "name": "Everforest",
+  "description": "Sainnhe's forest floor - warm soft sage with muted autumn accents",
+  "bg": "#2D353B",
+  "text": "#D3C6AA",
+  "gradient_color": "#2D353B",
+  "water": "#323A40",
+  "parks": "#384B3A",
+  "road_motorway": "#A7C080",
+  "road_primary": "#DBBC7F",
+  "road_secondary": "#7FBBB3",
+  "road_tertiary": "#E69875",
+  "road_residential": "#475258",
+  "road_default": "#859289"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "DOS 6.22",
+  "description": "Microsoft DOS blue-screen nostalgia - classic IBM PC palette",
+  "bg": "#0000AA",
+  "text": "#FFFFFF",
+  "gradient_color": "#0000AA",
+  "water": "#000080",
+  "parks": "#00008B",
+  "road_motorway": "#FFFF55",
+  "road_primary": "#FFFFFF",
+  "road_secondary": "#AAAAAA",
+  "road_tertiary": "#AA5500",
+  "road_residential": "#555555",
+  "road_default": "#AAAAAA"
+}

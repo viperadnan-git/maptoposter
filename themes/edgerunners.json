@@ -1,0 +1,15 @@
+{
+  "name": "Edgerunners",
+  "description": "David Martinez chartreuse jacket on cybernetic Night City magenta haze",
+  "bg": "#0F0C18",
+  "text": "#D8FF3D",
+  "gradient_color": "#0F0C18",
+  "water": "#151028",
+  "parks": "#1A1530",
+  "road_motorway": "#D8FF3D",
+  "road_primary": "#F92AA6",
+  "road_secondary": "#00E5FF",
+  "road_tertiary": "#A52FC4",
+  "road_residential": "#2C2148",
+  "road_default": "#4E3E75"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Evangelion",
+  "description": "Eva Unit-01 chartreuse with NERV red and deep violet armor plating",
+  "bg": "#1D1A2F",
+  "text": "#8BD450",
+  "gradient_color": "#1D1A2F",
+  "water": "#22203A",
+  "parks": "#1D2E1A",
+  "road_motorway": "#E52C2C",
+  "road_primary": "#8BD450",
+  "road_secondary": "#F58D39",
+  "road_tertiary": "#965FD4",
+  "road_residential": "#3F335A",
+  "road_default": "#734F9A"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "BBS",
+  "description": "Dial-up bulletin board - ANSI bright cyan, magenta and yellow on black",
+  "bg": "#000000",
+  "text": "#55FFFF",
+  "gradient_color": "#000000",
+  "water": "#000055",
+  "parks": "#005500",
+  "road_motorway": "#FF55FF",
+  "road_primary": "#55FFFF",
+  "road_secondary": "#FFFF55",
+  "road_tertiary": "#FF5555",
+  "road_residential": "#555555",
+  "road_default": "#AAAAAA"
+}

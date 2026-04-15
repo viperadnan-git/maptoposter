@@ -1,0 +1,15 @@
+{
+  "name": "Kid A",
+  "description": "Radiohead Kid A - fractured orange peaks and teal fragments on blue-black",
+  "bg": "#0A0F14",
+  "text": "#D4531E",
+  "gradient_color": "#0A0F14",
+  "water": "#0E141C",
+  "parks": "#122028",
+  "road_motorway": "#D4531E",
+  "road_primary": "#2A88A4",
+  "road_secondary": "#B99655",
+  "road_tertiary": "#54756F",
+  "road_residential": "#1E2C32",
+  "road_default": "#54756F"
+}

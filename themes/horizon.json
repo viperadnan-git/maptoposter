@@ -1,0 +1,15 @@
+{
+  "name": "Horizon",
+  "description": "Warm horizon theme - coral rose and teal accents on warm dusk slate",
+  "bg": "#1C1E26",
+  "text": "#CBCED0",
+  "gradient_color": "#1C1E26",
+  "water": "#232530",
+  "parks": "#2E303E",
+  "road_motorway": "#E95378",
+  "road_primary": "#FAB795",
+  "road_secondary": "#25B2BC",
+  "road_tertiary": "#B877DB",
+  "road_residential": "#3D3F4E",
+  "road_default": "#6C6F93"
+}

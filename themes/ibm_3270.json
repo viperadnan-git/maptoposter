@@ -1,0 +1,15 @@
+{
+  "name": "IBM 3270",
+  "description": "Classic mainframe terminal - bright phosphor green on jet black",
+  "bg": "#080808",
+  "text": "#43FF43",
+  "gradient_color": "#080808",
+  "water": "#0D120D",
+  "parks": "#0F140F",
+  "road_motorway": "#43FF43",
+  "road_primary": "#2DDC2D",
+  "road_secondary": "#1DAA1D",
+  "road_tertiary": "#127812",
+  "road_residential": "#0A4A0A",
+  "road_default": "#127812"
+}

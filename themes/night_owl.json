@@ -1,0 +1,15 @@
+{
+  "name": "Night Owl",
+  "description": "Sarah Drasner's Night Owl - cool blue base with teal and lavender accents",
+  "bg": "#011627",
+  "text": "#D6DEEB",
+  "gradient_color": "#011627",
+  "water": "#02203C",
+  "parks": "#0E293F",
+  "road_motorway": "#C792EA",
+  "road_primary": "#F78C6C",
+  "road_secondary": "#82AAFF",
+  "road_tertiary": "#7FDBCA",
+  "road_residential": "#1D3B53",
+  "road_default": "#637777"
+}

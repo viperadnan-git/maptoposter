@@ -1,0 +1,15 @@
+{
+  "name": "Liminal",
+  "description": "Backrooms unease - sickly fluorescent yellow on fluorescent-tinged dark",
+  "bg": "#16150C",
+  "text": "#D9C24A",
+  "gradient_color": "#16150C",
+  "water": "#1A1812",
+  "parks": "#1F1D14",
+  "road_motorway": "#E8D060",
+  "road_primary": "#D9C24A",
+  "road_secondary": "#B59C2F",
+  "road_tertiary": "#7D6A20",
+  "road_residential": "#453B13",
+  "road_default": "#7D6A20"
+}

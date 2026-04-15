@@ -1,0 +1,15 @@
+{
+  "name": "Seven",
+  "description": "Fincher's Se7en - sodium streetlamp green-grey on wet concrete",
+  "bg": "#131615",
+  "text": "#9FAA91",
+  "gradient_color": "#131615",
+  "water": "#181B1A",
+  "parks": "#1C201E",
+  "road_motorway": "#B8A057",
+  "road_primary": "#9FAA91",
+  "road_secondary": "#7C8577",
+  "road_tertiary": "#545C50",
+  "road_residential": "#2C2F2C",
+  "road_default": "#545C50"
+}

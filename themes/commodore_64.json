@@ -1,0 +1,15 @@
+{
+  "name": "Commodore 64",
+  "description": "Iconic C64 blue-on-blue boot screen aesthetic",
+  "bg": "#40318D",
+  "text": "#A5A4F3",
+  "gradient_color": "#40318D",
+  "water": "#332478",
+  "parks": "#372A82",
+  "road_motorway": "#A5A4F3",
+  "road_primary": "#8988D2",
+  "road_secondary": "#6F6EC0",
+  "road_tertiary": "#5757A8",
+  "road_residential": "#4B4A9A",
+  "road_default": "#5757A8"
+}

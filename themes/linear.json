@@ -1,0 +1,15 @@
+{
+  "name": "Linear",
+  "description": "Linear app signature indigo-purple on soft charcoal",
+  "bg": "#0F0F11",
+  "text": "#F7F8F8",
+  "gradient_color": "#0F0F11",
+  "water": "#151517",
+  "parks": "#1C1C1F",
+  "road_motorway": "#5E6AD2",
+  "road_primary": "#9297D1",
+  "road_secondary": "#C8CBDB",
+  "road_tertiary": "#62646A",
+  "road_residential": "#36373B",
+  "road_default": "#62646A"
+}

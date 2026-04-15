@@ -1,0 +1,15 @@
+{
+  "name": "In the Mood for Love",
+  "description": "Wong Kar-wai 1960s Hong Kong - lantern red, qipao gold and neon teal smoke",
+  "bg": "#0F0809",
+  "text": "#F2B85C",
+  "gradient_color": "#0F0809",
+  "water": "#140A0C",
+  "parks": "#180E10",
+  "road_motorway": "#D63B3B",
+  "road_primary": "#40B3A8",
+  "road_secondary": "#F2B85C",
+  "road_tertiary": "#6B2E2E",
+  "road_residential": "#2A1618",
+  "road_default": "#6B2E2E"
+}

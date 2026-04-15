@@ -1,0 +1,15 @@
+{
+  "name": "GTA Dark",
+  "description": "GTA V pause-menu map inverted - cream roads on charcoal with signature pink highway",
+  "bg": "#1A1C1F",
+  "text": "#E8DCC4",
+  "gradient_color": "#1A1C1F",
+  "water": "#1E2A36",
+  "parks": "#2A3124",
+  "road_motorway": "#E8A0B5",
+  "road_primary": "#E8DCC4",
+  "road_secondary": "#B8AE98",
+  "road_tertiary": "#8B8270",
+  "road_residential": "#52504A",
+  "road_default": "#8B8270"
+}

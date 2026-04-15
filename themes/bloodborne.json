@@ -1,0 +1,15 @@
+{
+  "name": "Bloodborne",
+  "description": "Yharnam blood moon crimson on cathedral stone shadow",
+  "bg": "#0D0708",
+  "text": "#B52E2E",
+  "gradient_color": "#0D0708",
+  "water": "#14080A",
+  "parks": "#181010",
+  "road_motorway": "#B52E2E",
+  "road_primary": "#8B2020",
+  "road_secondary": "#6F6A6A",
+  "road_tertiary": "#403838",
+  "road_residential": "#221A1A",
+  "road_default": "#403838"
+}

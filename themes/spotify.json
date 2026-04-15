@@ -1,0 +1,15 @@
+{
+  "name": "Spotify",
+  "description": "Signature electric green on pure player-dark",
+  "bg": "#121212",
+  "text": "#FFFFFF",
+  "gradient_color": "#121212",
+  "water": "#181818",
+  "parks": "#1B2A1E",
+  "road_motorway": "#1DB954",
+  "road_primary": "#1ED760",
+  "road_secondary": "#B3B3B3",
+  "road_tertiary": "#757575",
+  "road_residential": "#404040",
+  "road_default": "#757575"
+}

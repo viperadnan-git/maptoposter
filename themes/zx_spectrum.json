@@ -1,0 +1,15 @@
+{
+  "name": "ZX Spectrum",
+  "description": "Sinclair 8-bit rainbow - bright primary neons on pure black",
+  "bg": "#000000",
+  "text": "#FFFFFF",
+  "gradient_color": "#000000",
+  "water": "#000080",
+  "parks": "#006400",
+  "road_motorway": "#FF0000",
+  "road_primary": "#FFFF00",
+  "road_secondary": "#00FFFF",
+  "road_tertiary": "#FF00FF",
+  "road_residential": "#808080",
+  "road_default": "#C0C0C0"
+}

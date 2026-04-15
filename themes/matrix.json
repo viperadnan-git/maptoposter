@@ -1,0 +1,15 @@
+{
+  "name": "Matrix",
+  "description": "Digital rain - cascading bright green code on near-black",
+  "bg": "#050A05",
+  "text": "#00FF41",
+  "gradient_color": "#050A05",
+  "water": "#08150C",
+  "parks": "#0F1E12",
+  "road_motorway": "#22B455",
+  "road_primary": "#00FF41",
+  "road_secondary": "#03A062",
+  "road_tertiary": "#008F11",
+  "road_residential": "#204829",
+  "road_default": "#008F11"
+}

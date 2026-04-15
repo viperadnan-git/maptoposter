@@ -1,0 +1,15 @@
+{
+  "name": "Ayu Mirage",
+  "description": "Ayu Mirage - warm amber and cyan on muted navy slate",
+  "bg": "#1F2430",
+  "text": "#CBCCC6",
+  "gradient_color": "#1F2430",
+  "water": "#242936",
+  "parks": "#2D3444",
+  "road_motorway": "#FFCC66",
+  "road_primary": "#FFA759",
+  "road_secondary": "#5CCFE6",
+  "road_tertiary": "#BAE67E",
+  "road_residential": "#495162",
+  "road_default": "#5C6773"
+}

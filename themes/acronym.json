@@ -1,0 +1,15 @@
+{
+  "name": "Acronym",
+  "description": "Errolson Hugh tactical - safety orange accents on gorpcore tech charcoal",
+  "bg": "#14171A",
+  "text": "#FF5A00",
+  "gradient_color": "#14171A",
+  "water": "#191D20",
+  "parks": "#1D2125",
+  "road_motorway": "#FF5A00",
+  "road_primary": "#BFBFBF",
+  "road_secondary": "#7A7F82",
+  "road_tertiary": "#4A4D50",
+  "road_residential": "#2A2D30",
+  "road_default": "#4A4D50"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Ferrari",
+  "description": "Rosso Corsa racing red on carbon-fiber obsidian",
+  "bg": "#0A0808",
+  "text": "#FF2800",
+  "gradient_color": "#0A0808",
+  "water": "#0F0C0C",
+  "parks": "#141010",
+  "road_motorway": "#FF2800",
+  "road_primary": "#E8E8E8",
+  "road_secondary": "#A00A00",
+  "road_tertiary": "#6B0000",
+  "road_residential": "#2E0808",
+  "road_default": "#6B0000"
+}

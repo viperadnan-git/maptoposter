@@ -1,0 +1,15 @@
+{
+  "name": "Red Bull",
+  "description": "Racing livery - signature red and yellow on metallic Austrian blue",
+  "bg": "#0A1020",
+  "text": "#D92D3E",
+  "gradient_color": "#0A1020",
+  "water": "#0E1428",
+  "parks": "#121A32",
+  "road_motorway": "#D92D3E",
+  "road_primary": "#FFCC00",
+  "road_secondary": "#2C4C7F",
+  "road_tertiary": "#C0C6CE",
+  "road_residential": "#1A2842",
+  "road_default": "#3E5877"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Stripe",
+  "description": "Stripe indigo and cyan accents on deep payments-blue",
+  "bg": "#0A2540",
+  "text": "#EFF1F3",
+  "gradient_color": "#0A2540",
+  "water": "#0F2D4D",
+  "parks": "#14375E",
+  "road_motorway": "#635BFF",
+  "road_primary": "#00D4FF",
+  "road_secondary": "#87A5C7",
+  "road_tertiary": "#4F6A8A",
+  "road_residential": "#2B4566",
+  "road_default": "#4F6A8A"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Hades",
+  "description": "Styx blood red and god-gift purple on Underworld obsidian",
+  "bg": "#12060F",
+  "text": "#FF4D6D",
+  "gradient_color": "#12060F",
+  "water": "#180A14",
+  "parks": "#1F0F18",
+  "road_motorway": "#FF4D6D",
+  "road_primary": "#FFA94D",
+  "road_secondary": "#A855F7",
+  "road_tertiary": "#6B4A82",
+  "road_residential": "#2E1A2A",
+  "road_default": "#6B4A82"
+}

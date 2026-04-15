@@ -1,0 +1,15 @@
+{
+  "name": "Arcane",
+  "description": "Piltover gold meets Zaun neon violet and chemical teal",
+  "bg": "#130818",
+  "text": "#F0D380",
+  "gradient_color": "#130818",
+  "water": "#1A0A22",
+  "parks": "#1D1028",
+  "road_motorway": "#CB76E8",
+  "road_primary": "#F0D380",
+  "road_secondary": "#58D7C5",
+  "road_tertiary": "#7A3E9B",
+  "road_residential": "#38244A",
+  "road_default": "#5A4970"
+}

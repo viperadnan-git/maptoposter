@@ -1,0 +1,15 @@
+{
+  "name": "Elden Ring",
+  "description": "Erdtree gold and ember on charred Lands Between black",
+  "bg": "#040200",
+  "text": "#F9C043",
+  "gradient_color": "#040200",
+  "water": "#0D0804",
+  "parks": "#14100A",
+  "road_motorway": "#F9C043",
+  "road_primary": "#BD6707",
+  "road_secondary": "#653815",
+  "road_tertiary": "#3E2710",
+  "road_residential": "#27170D",
+  "road_default": "#3E2710"
+}

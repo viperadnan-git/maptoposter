@@ -1,0 +1,15 @@
+{
+  "name": "Monokai Pro",
+  "description": "Classic Monokai Pro - vibrant red/green/cyan accents on warm dark grey",
+  "bg": "#2D2A2E",
+  "text": "#FCFCFA",
+  "gradient_color": "#2D2A2E",
+  "water": "#363337",
+  "parks": "#3A373B",
+  "road_motorway": "#FF6188",
+  "road_primary": "#FFD866",
+  "road_secondary": "#A9DC76",
+  "road_tertiary": "#78DCE8",
+  "road_residential": "#727072",
+  "road_default": "#939293"
+}

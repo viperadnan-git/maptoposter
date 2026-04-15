@@ -1,0 +1,15 @@
+{
+  "name": "Apple Maps Dark",
+  "description": "iOS dark-mode cartography - iOS charcoal with muted greys and gold highways",
+  "bg": "#1C1C1E",
+  "text": "#8E8E93",
+  "gradient_color": "#1C1C1E",
+  "water": "#0A2744",
+  "parks": "#1D3B2A",
+  "road_motorway": "#B8A05C",
+  "road_primary": "#9E9E9E",
+  "road_secondary": "#7C7C80",
+  "road_tertiary": "#5A5A5E",
+  "road_residential": "#3A3A3C",
+  "road_default": "#5A5A5E"
+}

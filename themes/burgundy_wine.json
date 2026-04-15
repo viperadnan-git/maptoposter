@@ -1,0 +1,15 @@
+{
+  "name": "Burgundy Wine",
+  "description": "Cellar-deep wine red with dusty rose - opulent merlot palette",
+  "bg": "#1F0A14",
+  "text": "#D4868F",
+  "gradient_color": "#1F0A14",
+  "water": "#260C18",
+  "parks": "#1C0F18",
+  "road_motorway": "#C9334C",
+  "road_primary": "#D4868F",
+  "road_secondary": "#8B3A4A",
+  "road_tertiary": "#5C2833",
+  "road_residential": "#2E1018",
+  "road_default": "#5C2833"
+}

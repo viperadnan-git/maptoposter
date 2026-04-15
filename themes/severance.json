@@ -1,0 +1,15 @@
+{
+  "name": "Severance",
+  "description": "Lumon Industries - clinical corporate cyan on sterile slate",
+  "bg": "#161B22",
+  "text": "#C8D8E4",
+  "gradient_color": "#161B22",
+  "water": "#1A2230",
+  "parks": "#1D2730",
+  "road_motorway": "#4FB3BF",
+  "road_primary": "#9FB6C8",
+  "road_secondary": "#5C7A8A",
+  "road_tertiary": "#3D5362",
+  "road_residential": "#2A3642",
+  "road_default": "#3D5362"
+}

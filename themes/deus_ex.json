@@ -1,0 +1,15 @@
+{
+  "name": "Deus Ex",
+  "description": "Mankind Divided - ornate gold and bronze on obsidian black",
+  "bg": "#0A0A0A",
+  "text": "#C9A961",
+  "gradient_color": "#0A0A0A",
+  "water": "#0D0D0D",
+  "parks": "#141310",
+  "road_motorway": "#C9A961",
+  "road_primary": "#E8C677",
+  "road_secondary": "#8A7438",
+  "road_tertiary": "#5E5028",
+  "road_residential": "#2D261A",
+  "road_default": "#5E5028"
+}

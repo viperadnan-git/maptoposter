@@ -1,0 +1,15 @@
+{
+  "name": "Kanagawa",
+  "description": "Hokusai's Great Wave - crystal blue wave on sumi ink with autumn accents",
+  "bg": "#1F1F28",
+  "text": "#DCD7BA",
+  "gradient_color": "#1F1F28",
+  "water": "#223249",
+  "parks": "#2D3D3A",
+  "road_motorway": "#7E9CD8",
+  "road_primary": "#C0A36E",
+  "road_secondary": "#957FB8",
+  "road_tertiary": "#6A9589",
+  "road_residential": "#363648",
+  "road_default": "#727169"
+}

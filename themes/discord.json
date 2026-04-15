@@ -1,0 +1,15 @@
+{
+  "name": "Discord",
+  "description": "Discord blurple on guild-channel slate dark",
+  "bg": "#2B2D31",
+  "text": "#DCDDDE",
+  "gradient_color": "#2B2D31",
+  "water": "#313338",
+  "parks": "#3A3D42",
+  "road_motorway": "#5865F2",
+  "road_primary": "#B8BBF8",
+  "road_secondary": "#72767D",
+  "road_tertiary": "#4F5660",
+  "road_residential": "#3C3F45",
+  "road_default": "#72767D"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Hotline Miami",
+  "description": "Neon pink bloodbath - vivid magenta and aqua on violet-black",
+  "bg": "#1A0533",
+  "text": "#FF3EA5",
+  "gradient_color": "#1A0533",
+  "water": "#1F0A3E",
+  "parks": "#2A1245",
+  "road_motorway": "#FF3EA5",
+  "road_primary": "#00F5D4",
+  "road_secondary": "#FFC145",
+  "road_tertiary": "#B14AED",
+  "road_residential": "#4E2B80",
+  "road_default": "#6B3E9E"
+}

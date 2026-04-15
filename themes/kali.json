@@ -1,0 +1,15 @@
+{
+  "name": "Kali",
+  "description": "Kali Linux dragon - pentest blue on deep-space indigo",
+  "bg": "#06051F",
+  "text": "#367BF0",
+  "gradient_color": "#06051F",
+  "water": "#0B0C28",
+  "parks": "#0F182A",
+  "road_motorway": "#367BF0",
+  "road_primary": "#5294E2",
+  "road_secondary": "#00B4C8",
+  "road_tertiary": "#2D4B6F",
+  "road_residential": "#1A2B47",
+  "road_default": "#2D4B6F"
+}

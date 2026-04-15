@@ -1,0 +1,15 @@
+{
+  "name": "Editorial Dark",
+  "description": "Night-edition newsprint - ivory typography on deep black with saffron accent",
+  "bg": "#0E0E0E",
+  "text": "#EDE8D8",
+  "gradient_color": "#0E0E0E",
+  "water": "#161616",
+  "parks": "#1C1C18",
+  "road_motorway": "#F6CB2F",
+  "road_primary": "#EDE8D8",
+  "road_secondary": "#BCB8AB",
+  "road_tertiary": "#8A877F",
+  "road_residential": "#5A5852",
+  "road_default": "#8A877F"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Lamborghini",
+  "description": "Verde Mantis toxic green on Nero Serapis carbon black",
+  "bg": "#0A0C08",
+  "text": "#A5FF1A",
+  "gradient_color": "#0A0C08",
+  "water": "#0C0E0A",
+  "parks": "#10130E",
+  "road_motorway": "#A5FF1A",
+  "road_primary": "#83CC14",
+  "road_secondary": "#5F9010",
+  "road_tertiary": "#3F600A",
+  "road_residential": "#1F3006",
+  "road_default": "#3F600A"
+}

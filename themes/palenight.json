@@ -1,0 +1,15 @@
+{
+  "name": "Palenight",
+  "description": "Material Palenight - dreamy lavender and coral on muted indigo",
+  "bg": "#292D3E",
+  "text": "#A6ACCD",
+  "gradient_color": "#292D3E",
+  "water": "#2E3347",
+  "parks": "#353A50",
+  "road_motorway": "#F07178",
+  "road_primary": "#FFCB6B",
+  "road_secondary": "#82AAFF",
+  "road_tertiary": "#C792EA",
+  "road_residential": "#434758",
+  "road_default": "#676E95"
+}

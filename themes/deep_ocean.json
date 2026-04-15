@@ -1,0 +1,15 @@
+{
+  "name": "Deep Ocean",
+  "description": "Abyssal depths - bioluminescent teal on midnight navy",
+  "bg": "#040A18",
+  "text": "#7ED8E8",
+  "gradient_color": "#040A18",
+  "water": "#06101E",
+  "parks": "#0A1A22",
+  "road_motorway": "#7ED8E8",
+  "road_primary": "#3FA9B8",
+  "road_secondary": "#1F5C7A",
+  "road_tertiary": "#144558",
+  "road_residential": "#0E2C3A",
+  "road_default": "#144558"
+}
