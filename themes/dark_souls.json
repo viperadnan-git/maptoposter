@@ -11,5 +11,12 @@
   "road_secondary": "#695442",
   "road_tertiary": "#4A3E30",
   "road_residential": "#38322B",
-  "road_default": "#695442"
+  "road_default": "#695442",
+  "tags": [
+    "dark",
+    "gaming",
+    "fromsoftware",
+    "fantasy",
+    "warm"
+  ]
 }

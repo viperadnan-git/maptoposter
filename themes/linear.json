@@ -11,5 +11,11 @@
   "road_secondary": "#C8CBDB",
   "road_tertiary": "#62646A",
   "road_residential": "#36373B",
-  "road_default": "#62646A"
+  "road_default": "#62646A",
+  "tags": [
+    "dark",
+    "brand",
+    "minimalist",
+    "purple"
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "name": "Rosé Pine",
+  "name": "Ros\u00e9 Pine",
   "description": "Soho vibes for the moonlit night - rose, iris and foam on deep plum",
   "bg": "#191724",
   "text": "#E0DEF4",
@@ -11,5 +11,11 @@
   "road_secondary": "#9CCFD8",
   "road_tertiary": "#C4A7E7",
   "road_residential": "#403D52",
-  "road_default": "#6E6A86"
+  "road_default": "#6E6A86",
+  "tags": [
+    "dark",
+    "editor",
+    "popular",
+    "rose"
+  ]
 }

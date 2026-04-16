@@ -1,5 +1,5 @@
 {
-  "name": "Comme des Garçons",
+  "name": "Comme des Gar\u00e7ons",
   "description": "Rei Kawakubo void - stark CDG red heart on pure black",
   "bg": "#000000",
   "text": "#E61E2B",
@@ -11,5 +11,12 @@
   "road_secondary": "#B0B0B0",
   "road_tertiary": "#707070",
   "road_residential": "#353535",
-  "road_default": "#707070"
+  "road_default": "#707070",
+  "tags": [
+    "dark",
+    "brand",
+    "fashion",
+    "minimalist",
+    "red"
+  ]
 }

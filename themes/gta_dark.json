@@ -11,5 +11,11 @@
   "road_secondary": "#B8AE98",
   "road_tertiary": "#8B8270",
   "road_residential": "#52504A",
-  "road_default": "#8B8270"
+  "road_default": "#8B8270",
+  "tags": [
+    "dark",
+    "gaming",
+    "cartography",
+    "map"
+  ]
 }

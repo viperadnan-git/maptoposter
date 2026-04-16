@@ -11,5 +11,12 @@
   "road_secondary": "#E59400",
   "road_tertiary": "#B87200",
   "road_residential": "#6B4200",
-  "road_default": "#B87200"
+  "road_default": "#B87200",
+  "tags": [
+    "dark",
+    "hacker",
+    "retro",
+    "terminal",
+    "amber"
+  ]
 }

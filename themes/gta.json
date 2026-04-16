@@ -11,5 +11,12 @@
   "road_secondary": "#4A4A4A",
   "road_tertiary": "#6B6B6B",
   "road_residential": "#938D7C",
-  "road_default": "#4A4A4A"
+  "road_default": "#4A4A4A",
+  "tags": [
+    "light",
+    "gaming",
+    "cartography",
+    "paper",
+    "map"
+  ]
 }

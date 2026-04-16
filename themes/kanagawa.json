@@ -11,5 +11,12 @@
   "road_secondary": "#957FB8",
   "road_tertiary": "#6A9589",
   "road_residential": "#363648",
-  "road_default": "#727169"
+  "road_default": "#727169",
+  "tags": [
+    "dark",
+    "editor",
+    "japanese",
+    "art",
+    "asian"
+  ]
 }

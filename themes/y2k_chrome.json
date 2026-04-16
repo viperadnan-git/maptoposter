@@ -11,5 +11,12 @@
   "road_secondary": "#FFA6E0",
   "road_tertiary": "#9CA0B2",
   "road_residential": "#3A3E4E",
-  "road_default": "#5A6175"
+  "road_default": "#5A6175",
+  "tags": [
+    "dark",
+    "aesthetic",
+    "y2k",
+    "chrome",
+    "early-2000s"
+  ]
 }

@@ -11,5 +11,12 @@
   "road_secondary": "#FFC145",
   "road_tertiary": "#B14AED",
   "road_residential": "#4E2B80",
-  "road_default": "#6B3E9E"
+  "road_default": "#6B3E9E",
+  "tags": [
+    "dark",
+    "gaming",
+    "neon",
+    "miami",
+    "retro"
+  ]
 }

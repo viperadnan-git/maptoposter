@@ -11,5 +11,13 @@
   "road_secondary": "#58D7C5",
   "road_tertiary": "#7A3E9B",
   "road_residential": "#38244A",
-  "road_default": "#5A4970"
+  "road_default": "#5A4970",
+  "tags": [
+    "dark",
+    "tv",
+    "animation",
+    "fantasy",
+    "neon",
+    "gold"
+  ]
 }

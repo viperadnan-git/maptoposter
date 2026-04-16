@@ -252,9 +252,30 @@ Create a JSON file in `themes/` directory:
   "road_secondary": "#2A2A2A",
   "road_tertiary": "#3A3A3A",
   "road_residential": "#4A4A4A",
-  "road_default": "#3A3A3A"
+  "road_default": "#3A3A3A",
+  "tags": ["light", "minimalist"]
 }
 ```
+
+### Tags
+
+Each theme may declare an optional `tags` array. The tag list is free-form
+and used purely for selection. By convention themes include either
+`"dark"` or `"light"` plus category labels like `"editor"`, `"hacker"`,
+`"brand"`, `"retro"`, `"film"`, etc., but nothing is enforced.
+
+Render every theme that carries a given tag (or any of a set of tags)
+with `--tag`:
+
+```bash
+# All light themes
+uv run ./create_map_poster.py -c Paris -C France --tag light
+
+# Any theme tagged dark OR brand
+uv run ./create_map_poster.py -c Paris -C France --tag "dark,brand"
+```
+
+`--tag` is mutually exclusive with `--theme` and `--all-themes`.
 
 ## Project Structure
 

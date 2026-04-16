@@ -11,5 +11,12 @@
   "road_secondary": "#4A4A4A",
   "road_tertiary": "#707070",
   "road_residential": "#A0A0A0",
-  "road_default": "#4A4A4A"
+  "road_default": "#4A4A4A",
+  "tags": [
+    "light",
+    "editorial",
+    "minimalist",
+    "swiss",
+    "newsprint"
+  ]
 }

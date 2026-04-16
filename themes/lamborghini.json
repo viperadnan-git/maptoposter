@@ -11,5 +11,12 @@
   "road_secondary": "#5F9010",
   "road_tertiary": "#3F600A",
   "road_residential": "#1F3006",
-  "road_default": "#3F600A"
+  "road_default": "#3F600A",
+  "tags": [
+    "dark",
+    "brand",
+    "automotive",
+    "luxury",
+    "green"
+  ]
 }

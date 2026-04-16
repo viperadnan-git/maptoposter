@@ -11,5 +11,12 @@
   "road_secondary": "#F58D39",
   "road_tertiary": "#965FD4",
   "road_residential": "#3F335A",
-  "road_default": "#734F9A"
+  "road_default": "#734F9A",
+  "tags": [
+    "dark",
+    "anime",
+    "mecha",
+    "japanese",
+    "asian"
+  ]
 }

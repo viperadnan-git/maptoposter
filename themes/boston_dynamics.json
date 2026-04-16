@@ -11,5 +11,12 @@
   "road_secondary": "#878787",
   "road_tertiary": "#505050",
   "road_residential": "#2A2D30",
-  "road_default": "#505050"
+  "road_default": "#505050",
+  "tags": [
+    "dark",
+    "brand",
+    "industrial",
+    "robotics",
+    "yellow"
+  ]
 }

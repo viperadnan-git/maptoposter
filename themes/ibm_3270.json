@@ -11,5 +11,13 @@
   "road_secondary": "#1DAA1D",
   "road_tertiary": "#127812",
   "road_residential": "#0A4A0A",
-  "road_default": "#127812"
+  "road_default": "#127812",
+  "tags": [
+    "dark",
+    "hacker",
+    "retro",
+    "terminal",
+    "mainframe",
+    "green"
+  ]
 }

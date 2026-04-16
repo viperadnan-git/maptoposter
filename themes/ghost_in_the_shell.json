@@ -11,5 +11,12 @@
   "road_secondary": "#80DEEA",
   "road_tertiary": "#2A8A9A",
   "road_residential": "#162F38",
-  "road_default": "#1F5964"
+  "road_default": "#1F5964",
+  "tags": [
+    "dark",
+    "anime",
+    "cyberpunk",
+    "japanese",
+    "asian"
+  ]
 }

@@ -11,5 +11,11 @@
   "road_secondary": "#FFAA00",
   "road_tertiary": "#C43A18",
   "road_residential": "#5C1A0E",
-  "road_default": "#8A2D1A"
+  "road_default": "#8A2D1A",
+  "tags": [
+    "dark",
+    "nature",
+    "warm",
+    "lava"
+  ]
 }

@@ -11,5 +11,13 @@
   "road_secondary": "#FEDE5D",
   "road_tertiary": "#72F1B8",
   "road_residential": "#495495",
-  "road_default": "#6D4A8C"
+  "road_default": "#6D4A8C",
+  "tags": [
+    "dark",
+    "editor",
+    "aesthetic",
+    "synthwave",
+    "retrofuturist",
+    "neon"
+  ]
 }

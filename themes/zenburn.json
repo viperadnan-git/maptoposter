@@ -11,5 +11,11 @@
   "road_secondary": "#7F9F7F",
   "road_tertiary": "#8CD0D3",
   "road_residential": "#6F6F6F",
-  "road_default": "#8A8A8A"
+  "road_default": "#8A8A8A",
+  "tags": [
+    "dark",
+    "editor",
+    "classic",
+    "muted"
+  ]
 }

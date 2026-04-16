@@ -11,5 +11,12 @@
   "road_secondary": "#7A7F82",
   "road_tertiary": "#4A4D50",
   "road_residential": "#2A2D30",
-  "road_default": "#4A4D50"
+  "road_default": "#4A4D50",
+  "tags": [
+    "dark",
+    "brand",
+    "fashion",
+    "tactical",
+    "orange"
+  ]
 }

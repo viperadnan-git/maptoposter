@@ -11,5 +11,12 @@
   "road_secondary": "#8B6630",
   "road_tertiary": "#523D28",
   "road_residential": "#261E18",
-  "road_default": "#523D28"
+  "road_default": "#523D28",
+  "tags": [
+    "dark",
+    "tv",
+    "cinematic",
+    "lynch",
+    "red"
+  ]
 }

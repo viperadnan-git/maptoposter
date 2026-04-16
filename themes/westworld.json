@@ -11,5 +11,12 @@
   "road_secondary": "#C99958",
   "road_tertiary": "#8B6B3C",
   "road_residential": "#4A3A28",
-  "road_default": "#6B5538"
+  "road_default": "#6B5538",
+  "tags": [
+    "dark",
+    "tv",
+    "cinematic",
+    "western",
+    "gold"
+  ]
 }

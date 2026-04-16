@@ -11,5 +11,11 @@
   "road_secondary": "#1270B8",
   "road_tertiary": "#1AA167",
   "road_residential": "#4A4A4A",
-  "road_default": "#777777"
+  "road_default": "#777777",
+  "tags": [
+    "dark",
+    "brand",
+    "industrial",
+    "matte"
+  ]
 }

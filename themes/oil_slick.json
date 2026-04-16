@@ -11,5 +11,10 @@
   "road_secondary": "#5AC4E8",
   "road_tertiary": "#7F5CD9",
   "road_residential": "#1F1A2A",
-  "road_default": "#4A3D5E"
+  "road_default": "#4A3D5E",
+  "tags": [
+    "dark",
+    "aesthetic",
+    "iridescent"
+  ]
 }

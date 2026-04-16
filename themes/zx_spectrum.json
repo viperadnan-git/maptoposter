@@ -11,5 +11,10 @@
   "road_secondary": "#00FFFF",
   "road_tertiary": "#FF00FF",
   "road_residential": "#808080",
-  "road_default": "#C0C0C0"
+  "road_default": "#C0C0C0",
+  "tags": [
+    "dark",
+    "retro",
+    "8bit"
+  ]
 }

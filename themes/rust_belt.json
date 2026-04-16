@@ -11,5 +11,11 @@
   "road_secondary": "#5C5753",
   "road_tertiary": "#3E3A36",
   "road_residential": "#262320",
-  "road_default": "#3E3A36"
+  "road_default": "#3E3A36",
+  "tags": [
+    "dark",
+    "aesthetic",
+    "industrial",
+    "warm"
+  ]
 }

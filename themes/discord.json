@@ -11,5 +11,10 @@
   "road_secondary": "#72767D",
   "road_tertiary": "#4F5660",
   "road_residential": "#3C3F45",
-  "road_default": "#72767D"
+  "road_default": "#72767D",
+  "tags": [
+    "dark",
+    "brand",
+    "blurple"
+  ]
 }

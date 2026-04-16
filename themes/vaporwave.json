@@ -11,5 +11,12 @@
   "road_secondary": "#B967FF",
   "road_tertiary": "#05FFA1",
   "road_residential": "#3D2B63",
-  "road_default": "#5B4494"
+  "road_default": "#5B4494",
+  "tags": [
+    "dark",
+    "aesthetic",
+    "vaporwave",
+    "90s",
+    "pastel"
+  ]
 }

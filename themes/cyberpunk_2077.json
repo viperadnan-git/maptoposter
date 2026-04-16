@@ -11,5 +11,11 @@
   "road_secondary": "#FF003C",
   "road_tertiary": "#FF00E6",
   "road_residential": "#3D304A",
-  "road_default": "#5A466A"
+  "road_default": "#5A466A",
+  "tags": [
+    "dark",
+    "gaming",
+    "cyberpunk",
+    "neon"
+  ]
 }

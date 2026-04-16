@@ -11,5 +11,11 @@
   "road_secondary": "#7C7C80",
   "road_tertiary": "#5A5A5E",
   "road_residential": "#3A3A3C",
-  "road_default": "#5A5A5E"
+  "road_default": "#5A5A5E",
+  "tags": [
+    "dark",
+    "brand",
+    "cartography",
+    "apple"
+  ]
 }

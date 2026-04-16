@@ -11,5 +11,13 @@
   "road_secondary": "#39FF14",
   "road_tertiary": "#FFFF00",
   "road_residential": "#5A2B80",
-  "road_default": "#7A4DA8"
+  "road_default": "#7A4DA8",
+  "tags": [
+    "dark",
+    "hacker",
+    "film",
+    "cyberpunk",
+    "neon",
+    "90s"
+  ]
 }

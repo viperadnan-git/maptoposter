@@ -11,5 +11,10 @@
   "road_secondary": "#87A5C7",
   "road_tertiary": "#4F6A8A",
   "road_residential": "#2B4566",
-  "road_default": "#4F6A8A"
+  "road_default": "#4F6A8A",
+  "tags": [
+    "dark",
+    "brand",
+    "indigo"
+  ]
 }

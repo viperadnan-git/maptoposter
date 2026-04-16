@@ -11,5 +11,11 @@
   "road_secondary": "#9F7BE0",
   "road_tertiary": "#5A7FA8",
   "road_residential": "#2E3A52",
-  "road_default": "#5A7FA8"
+  "road_default": "#5A7FA8",
+  "tags": [
+    "dark",
+    "gaming",
+    "scifi",
+    "space"
+  ]
 }

@@ -11,5 +11,11 @@
   "road_secondary": "#3DDBD9",
   "road_tertiary": "#82CFFF",
   "road_residential": "#393939",
-  "road_default": "#525252"
+  "road_default": "#525252",
+  "tags": [
+    "dark",
+    "editor",
+    "ibm",
+    "carbon"
+  ]
 }

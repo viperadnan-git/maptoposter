@@ -181,37 +181,46 @@ def get_available_themes():
     return themes
 
 
+def _read_theme_tags(theme_name):
+    """Return the tag list declared by a theme (without running validation)."""
+    path = os.path.join(THEMES_DIR, f"{theme_name}.json")
+    try:
+        with open(path, "r", encoding=FILE_ENCODING) as f:
+            return json.load(f).get("tags") or []
+    except (OSError, json.JSONDecodeError):
+        return []
+
+
+def get_themes_with_tag(tags):
+    """
+    Return theme names whose `tags` field contains ANY of the given tags.
+    """
+    wanted = {t.strip() for t in tags if t.strip()}
+    return [
+        name for name in get_available_themes()
+        if wanted.intersection(_read_theme_tags(name))
+    ]
+
+
 def load_theme(theme_name="terracotta"):
     """
-    Load theme from JSON file in themes directory.
+    Load a theme from themes/<theme_name>.json.
+
+    The optional `tags` array is a free-form convention; including at least
+    one of "dark" or "light" is recommended but not enforced.
     """
     theme_file = os.path.join(THEMES_DIR, f"{theme_name}.json")
 
     if not os.path.exists(theme_file):
-        print(f"⚠ Theme file '{theme_file}' not found. Using default terracotta theme.")
-        # Fallback to embedded terracotta theme
-        return {
-            "name": "Terracotta",
-            "description": "Mediterranean warmth - burnt orange and clay tones on cream",
-            "bg": "#F5EDE4",
-            "text": "#8B4513",
-            "gradient_color": "#F5EDE4",
-            "water": "#A8C4C4",
-            "parks": "#E8E0D0",
-            "road_motorway": "#A0522D",
-            "road_primary": "#B8653A",
-            "road_secondary": "#C9846A",
-            "road_tertiary": "#D9A08A",
-            "road_residential": "#E5C4B0",
-            "road_default": "#D9A08A",
-        }
+        raise FileNotFoundError(f"Theme file not found: {theme_file}")
 
     with open(theme_file, "r", encoding=FILE_ENCODING) as f:
         theme = json.load(f)
-        print(f"✓ Loaded theme: {theme.get('name', theme_name)}")
-        if "description" in theme:
-            print(f"  {theme['description']}")
-        return theme
+
+    print(f"✓ Loaded theme: {theme.get('name', theme_name)}")
+    if "description" in theme:
+        print(f"  {theme['description']}")
+    return theme
 
 
 # Load theme (can be changed via command line or input)
@@ -865,6 +874,14 @@ Examples:
         help="Generate posters for all themes",
     )
     parser.add_argument(
+        "--tag",
+        metavar="TAG[,TAG,...]",
+        help=(
+            "Render every theme whose 'tags' field contains any of the given "
+            "tags (comma-separated). Mutually exclusive with --theme and --all-themes."
+        ),
+    )
+    parser.add_argument(
         "--distance",
         "-d",
         type=int,
@@ -980,8 +997,18 @@ Examples:
         print("No themes found in 'themes/' directory.")
         sys.exit(1)
 
+    if args.tag and (args.all_themes or args.theme != parser.get_default("theme")):
+        print("Error: --tag is mutually exclusive with --theme and --all-themes.")
+        sys.exit(1)
+
     if args.all_themes:
         themes_to_generate = available_themes
+    elif args.tag:
+        wanted = [t.strip() for t in args.tag.split(",") if t.strip()]
+        themes_to_generate = get_themes_with_tag(wanted)
+        if not themes_to_generate:
+            print(f"Error: No themes matched tag(s): {', '.join(wanted)}")
+            sys.exit(1)
     else:
         requested = [t.strip() for t in args.theme.split(",") if t.strip()]
         missing = [t for t in requested if t not in available_themes]

@@ -11,5 +11,11 @@
   "road_secondary": "#3A8AB8",
   "road_tertiary": "#2A6589",
   "road_residential": "#14253A",
-  "road_default": "#2A6589"
+  "road_default": "#2A6589",
+  "tags": [
+    "dark",
+    "brand",
+    "automotive",
+    "racing"
+  ]
 }

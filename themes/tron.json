@@ -11,5 +11,13 @@
   "road_secondary": "#00A3E0",
   "road_tertiary": "#0A6680",
   "road_residential": "#0A3040",
-  "road_default": "#0A6680"
+  "road_default": "#0A6680",
+  "tags": [
+    "dark",
+    "hacker",
+    "film",
+    "cinematic",
+    "neon",
+    "cyan"
+  ]
 }

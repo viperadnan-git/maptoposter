@@ -11,5 +11,11 @@
   "road_secondary": "#1270B8",
   "road_tertiary": "#1AA167",
   "road_residential": "#BDBDBD",
-  "road_default": "#888888"
+  "road_default": "#888888",
+  "tags": [
+    "light",
+    "brand",
+    "industrial",
+    "playful"
+  ]
 }

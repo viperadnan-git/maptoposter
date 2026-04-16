@@ -11,5 +11,10 @@
   "road_secondary": "#72B7D6",
   "road_tertiary": "#D67E5C",
   "road_residential": "#0F484E",
-  "road_default": "#507580"
+  "road_default": "#507580",
+  "tags": [
+    "dark",
+    "atmospheric",
+    "ethereal"
+  ]
 }

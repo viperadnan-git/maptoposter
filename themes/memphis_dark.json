@@ -11,5 +11,11 @@
   "road_secondary": "#FFE066",
   "road_tertiary": "#9C7DFF",
   "road_residential": "#2E2A6F",
-  "road_default": "#4C478B"
+  "road_default": "#4C478B",
+  "tags": [
+    "dark",
+    "aesthetic",
+    "80s",
+    "playful"
+  ]
 }

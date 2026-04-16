@@ -11,5 +11,10 @@
   "road_secondary": "#A855F7",
   "road_tertiary": "#6B4A82",
   "road_residential": "#2E1A2A",
-  "road_default": "#6B4A82"
+  "road_default": "#6B4A82",
+  "tags": [
+    "dark",
+    "gaming",
+    "mythology"
+  ]
 }

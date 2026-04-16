@@ -11,5 +11,12 @@
   "road_secondary": "#A00A00",
   "road_tertiary": "#6B0000",
   "road_residential": "#2E0808",
-  "road_default": "#6B0000"
+  "road_default": "#6B0000",
+  "tags": [
+    "dark",
+    "brand",
+    "automotive",
+    "luxury",
+    "red"
+  ]
 }

@@ -11,5 +11,12 @@
   "road_secondary": "#C5CBE0",
   "road_tertiary": "#4A89C1",
   "road_residential": "#16365B",
-  "road_default": "#4A6D99"
+  "road_default": "#4A6D99",
+  "tags": [
+    "dark",
+    "atmospheric",
+    "winter",
+    "icy",
+    "cool"
+  ]
 }

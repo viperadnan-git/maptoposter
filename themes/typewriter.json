@@ -11,5 +11,11 @@
   "road_secondary": "#8F897C",
   "road_tertiary": "#5A5550",
   "road_residential": "#2E2C28",
-  "road_default": "#5A5550"
+  "road_default": "#5A5550",
+  "tags": [
+    "dark",
+    "aesthetic",
+    "vintage",
+    "journalism"
+  ]
 }

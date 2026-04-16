@@ -11,5 +11,11 @@
   "road_secondary": "#6FCADB",
   "road_tertiary": "#4A5B9C",
   "road_residential": "#1E254F",
-  "road_default": "#4A5B9C"
+  "road_default": "#4A5B9C",
+  "tags": [
+    "dark",
+    "atmospheric",
+    "space",
+    "mission"
+  ]
 }

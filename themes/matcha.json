@@ -11,5 +11,13 @@
   "road_secondary": "#7F9970",
   "road_tertiary": "#5A6F52",
   "road_residential": "#2E3828",
-  "road_default": "#5A6F52"
+  "road_default": "#5A6F52",
+  "tags": [
+    "dark",
+    "aesthetic",
+    "japanese",
+    "nature",
+    "green",
+    "asian"
+  ]
 }

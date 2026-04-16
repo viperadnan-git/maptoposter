@@ -11,5 +11,11 @@
   "road_secondary": "#00B4C8",
   "road_tertiary": "#2D4B6F",
   "road_residential": "#1A2B47",
-  "road_default": "#2D4B6F"
+  "road_default": "#2D4B6F",
+  "tags": [
+    "dark",
+    "hacker",
+    "security",
+    "blue"
+  ]
 }

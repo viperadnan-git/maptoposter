@@ -11,5 +11,11 @@
   "road_secondary": "#2A5440",
   "road_tertiary": "#1C3728",
   "road_residential": "#0E1C13",
-  "road_default": "#1C3728"
+  "road_default": "#1C3728",
+  "tags": [
+    "dark",
+    "literary",
+    "horror",
+    "green"
+  ]
 }

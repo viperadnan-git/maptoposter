@@ -11,5 +11,11 @@
   "road_secondary": "#AAAAAA",
   "road_tertiary": "#AA5500",
   "road_residential": "#555555",
-  "road_default": "#AAAAAA"
+  "road_default": "#AAAAAA",
+  "tags": [
+    "dark",
+    "retro",
+    "operating-system",
+    "blue"
+  ]
 }

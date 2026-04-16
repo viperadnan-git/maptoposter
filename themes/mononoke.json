@@ -11,5 +11,13 @@
   "road_secondary": "#7DA890",
   "road_tertiary": "#4A6E58",
   "road_residential": "#1D3028",
-  "road_default": "#3A5548"
+  "road_default": "#3A5548",
+  "tags": [
+    "dark",
+    "anime",
+    "ghibli",
+    "nature",
+    "japanese",
+    "asian"
+  ]
 }

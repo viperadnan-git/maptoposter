@@ -11,5 +11,12 @@
   "road_secondary": "#B45E3A",
   "road_tertiary": "#8B4226",
   "road_residential": "#5C2F1C",
-  "road_default": "#8B4226"
+  "road_default": "#8B4226",
+  "tags": [
+    "dark",
+    "brand",
+    "anthropic",
+    "terminal",
+    "warm"
+  ]
 }

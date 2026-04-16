@@ -11,5 +11,11 @@
   "road_secondary": "#B3B3B3",
   "road_tertiary": "#757575",
   "road_residential": "#404040",
-  "road_default": "#757575"
+  "road_default": "#757575",
+  "tags": [
+    "dark",
+    "brand",
+    "music",
+    "green"
+  ]
 }

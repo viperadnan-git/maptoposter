@@ -11,5 +11,12 @@
   "road_secondary": "#6857A0",
   "road_tertiary": "#3E3163",
   "road_residential": "#201837",
-  "road_default": "#3E3163"
+  "road_default": "#3E3163",
+  "tags": [
+    "dark",
+    "film",
+    "cinematic",
+    "neon",
+    "pink"
+  ]
 }

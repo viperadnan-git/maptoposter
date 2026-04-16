@@ -11,5 +11,11 @@
   "road_secondary": "#4AA0C4",
   "road_tertiary": "#2E6A80",
   "road_residential": "#142838",
-  "road_default": "#2E6A80"
+  "road_default": "#2E6A80",
+  "tags": [
+    "dark",
+    "film",
+    "cinematic",
+    "scifi"
+  ]
 }

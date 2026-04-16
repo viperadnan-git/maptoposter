@@ -11,5 +11,11 @@
   "road_secondary": "#C06E93",
   "road_tertiary": "#7E445F",
   "road_residential": "#40232F",
-  "road_default": "#7E445F"
+  "road_default": "#7E445F",
+  "tags": [
+    "dark",
+    "music",
+    "album",
+    "pink"
+  ]
 }

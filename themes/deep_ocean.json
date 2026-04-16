@@ -11,5 +11,12 @@
   "road_secondary": "#1F5C7A",
   "road_tertiary": "#144558",
   "road_residential": "#0E2C3A",
-  "road_default": "#144558"
+  "road_default": "#144558",
+  "tags": [
+    "dark",
+    "nature",
+    "atmospheric",
+    "ocean",
+    "blue"
+  ]
 }

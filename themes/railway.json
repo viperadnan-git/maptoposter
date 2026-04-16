@@ -11,5 +11,10 @@
   "road_secondary": "#61E5D6",
   "road_tertiary": "#5B4C8A",
   "road_residential": "#2F2942",
-  "road_default": "#5B4C8A"
+  "road_default": "#5B4C8A",
+  "tags": [
+    "dark",
+    "brand",
+    "purple"
+  ]
 }

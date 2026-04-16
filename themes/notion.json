@@ -11,5 +11,11 @@
   "road_secondary": "#858585",
   "road_tertiary": "#5E5E5E",
   "road_residential": "#373737",
-  "road_default": "#5E5E5E"
+  "road_default": "#5E5E5E",
+  "tags": [
+    "dark",
+    "brand",
+    "minimalist",
+    "muted"
+  ]
 }

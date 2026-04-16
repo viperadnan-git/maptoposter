@@ -11,5 +11,10 @@
   "road_secondary": "#B5B5B5",
   "road_tertiary": "#636363",
   "road_residential": "#333333",
-  "road_default": "#636363"
+  "road_default": "#636363",
+  "tags": [
+    "dark",
+    "brand",
+    "green"
+  ]
 }

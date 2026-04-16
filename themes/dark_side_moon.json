@@ -11,5 +11,12 @@
   "road_secondary": "#FFF400",
   "road_tertiary": "#00A651",
   "road_residential": "#2E3192",
-  "road_default": "#92278F"
+  "road_default": "#92278F",
+  "tags": [
+    "dark",
+    "music",
+    "album",
+    "iconic",
+    "rainbow"
+  ]
 }

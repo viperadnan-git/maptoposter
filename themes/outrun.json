@@ -11,5 +11,12 @@
   "road_secondary": "#FCEE09",
   "road_tertiary": "#05D9E8",
   "road_residential": "#542E8C",
-  "road_default": "#7A4BB5"
+  "road_default": "#7A4BB5",
+  "tags": [
+    "dark",
+    "aesthetic",
+    "retrofuturist",
+    "80s",
+    "neon"
+  ]
 }

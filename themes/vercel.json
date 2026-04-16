@@ -11,5 +11,11 @@
   "road_secondary": "#A1A1A1",
   "road_tertiary": "#666666",
   "road_residential": "#333333",
-  "road_default": "#666666"
+  "road_default": "#666666",
+  "tags": [
+    "dark",
+    "brand",
+    "minimalist",
+    "monochrome"
+  ]
 }

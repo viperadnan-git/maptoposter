@@ -11,5 +11,11 @@
   "road_secondary": "#B59C2F",
   "road_tertiary": "#7D6A20",
   "road_residential": "#453B13",
-  "road_default": "#7D6A20"
+  "road_default": "#7D6A20",
+  "tags": [
+    "dark",
+    "aesthetic",
+    "backrooms",
+    "yellow"
+  ]
 }

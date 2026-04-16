@@ -11,5 +11,11 @@
   "road_secondary": "#BCB8AB",
   "road_tertiary": "#8A877F",
   "road_residential": "#5A5852",
-  "road_default": "#8A877F"
+  "road_default": "#8A877F",
+  "tags": [
+    "dark",
+    "editorial",
+    "minimalist",
+    "newsprint"
+  ]
 }
