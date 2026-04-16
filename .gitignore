@@ -33,3 +33,6 @@ test_venv/
 htmlcov/
 .coverage
 .pytest_cache/
+
+# Generated posters
+output/

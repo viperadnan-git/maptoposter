@@ -14,9 +14,10 @@ import os
 import pickle
 import sys
 import time
+from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import cast
+from typing import cast, Optional
 
 import matplotlib.colors as mcolors
 import matplotlib.pyplot as plt
@@ -29,6 +30,8 @@ from matplotlib.font_manager import FontProperties
 from networkx import MultiDiGraph
 from shapely.geometry import Point
 from tqdm import tqdm
+
+from concurrent.futures import ProcessPoolExecutor, as_completed
 
 from font_management import load_fonts
 
@@ -43,7 +46,7 @@ CACHE_DIR.mkdir(exist_ok=True)
 
 THEMES_DIR = "themes"
 FONTS_DIR = "fonts"
-POSTERS_DIR = "posters"
+POSTERS_DIR = "output"
 
 FILE_ENCODING = "utf-8"
 
@@ -144,18 +147,22 @@ def is_latin_script(text):
     return (latin_count / total_alpha) > 0.8
 
 
-def generate_output_filename(city, theme_name, output_format):
+def generate_output_filename(city, theme_name, output_format, output_dir=None):
     """
     Generate unique output filename with city, theme, and datetime.
+
+    Files are written under `output_dir` if given, otherwise POSTERS_DIR.
+    The directory is created if it doesn't exist.
     """
-    if not os.path.exists(POSTERS_DIR):
-        os.makedirs(POSTERS_DIR)
+    target_dir = output_dir or POSTERS_DIR
+    if not os.path.exists(target_dir):
+        os.makedirs(target_dir)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     city_slug = city.lower().replace(" ", "_")
     ext = output_format.lower()
     filename = f"{city_slug}_{theme_name}_{timestamp}.{ext}"
-    return os.path.join(POSTERS_DIR, filename)
+    return os.path.join(target_dir, filename)
 
 
 def get_available_themes():
@@ -479,11 +486,103 @@ def fetch_features(point, dist, tags, name) -> GeoDataFrame | None:
         return None
 
 
+@dataclass(frozen=True)
+class PosterLayers:
+    """
+    Theme-independent geometry precomputed for a given location and figure size.
+
+    Building this bundle is the expensive part (OSM fetch + graph projection +
+    polygon projection). Once built, it can be reused to render any number of
+    themed posters for the same location without repeating that work.
+    """
+
+    g_proj: MultiDiGraph
+    water_polys: Optional[GeoDataFrame]
+    parks_polys: Optional[GeoDataFrame]
+    edge_widths: list
+    compensated_dist: float
+    crop_xlim: tuple
+    crop_ylim: tuple
+
+    @classmethod
+    def prepare(cls, point, dist, width, height) -> "PosterLayers":
+        compensated_dist = dist * (max(height, width) / min(height, width)) / 4
+
+        g = fetch_graph(point, compensated_dist)
+        if g is None:
+            raise RuntimeError("Failed to retrieve street network data.")
+        water = fetch_features(
+            point, compensated_dist,
+            tags={"natural": ["water", "bay", "strait"], "waterway": "riverbank"},
+            name="water",
+        )
+        parks = fetch_features(
+            point, compensated_dist,
+            tags={"leisure": "park", "landuse": "grass"},
+            name="parks",
+        )
+
+        g_proj = ox.project_graph(g)
+
+        def _project_polys(gdf):
+            if gdf is None or gdf.empty:
+                return None
+            polys = gdf[gdf.geometry.type.isin(["Polygon", "MultiPolygon"])]
+            if polys.empty:
+                return None
+            try:
+                return ox.projection.project_gdf(polys)
+            except Exception:
+                return polys.to_crs(g_proj.graph["crs"])
+
+        # crop limits depend only on graph extent, centre and figure aspect;
+        # construct a throwaway figure so get_crop_limits can read the aspect
+        tmp_fig = plt.figure(figsize=(width, height))
+        try:
+            crop_xlim, crop_ylim = get_crop_limits(g_proj, point, tmp_fig, compensated_dist)
+        finally:
+            plt.close(tmp_fig)
+
+        return cls(
+            g_proj=g_proj,
+            water_polys=_project_polys(water),
+            parks_polys=_project_polys(parks),
+            edge_widths=get_edge_widths_by_type(g_proj),
+            compensated_dist=compensated_dist,
+            crop_xlim=crop_xlim,
+            crop_ylim=crop_ylim,
+        )
+
+
+# --- Parallel worker plumbing ----------------------------------------------
+# These module-level globals exist so a ProcessPoolExecutor can pickle the
+# worker entry point. Each worker process gets its own copy of `_WORKER`
+# populated once by `_worker_init`, then renders many themes from that cached
+# state without re-pickling the graph on every submission.
+
+_WORKER: dict = {}
+
+
+def _worker_init(layers: "PosterLayers", render_kwargs: dict) -> None:
+    _WORKER["layers"] = layers
+    _WORKER["render_kwargs"] = render_kwargs
+
+
+def _worker_render(theme_name: str, output_file: str) -> None:
+    global THEME
+    THEME = load_theme(theme_name)
+    render_poster(
+        _WORKER["layers"],
+        output_file=output_file,
+        **_WORKER["render_kwargs"],
+    )
+
+
 def _render_text_labels(ax, point, display_city, display_country, width, height, fonts):
     """
     Draw city/country/coordinates/attribution text on the poster.
 
-    Text rendering is isolated in this helper so create_poster can cleanly skip
+    Text rendering is isolated in this helper so render_poster can cleanly skip
     it (and the associated font loading) when --no-text is requested.
     """
     # Scale text for portrait/landscape orientations using smaller dimension
@@ -555,166 +654,78 @@ def _render_text_labels(ax, point, display_city, display_country, width, height,
             fontproperties=font_attr, zorder=11)
 
 
-def create_poster(
-    city,
-    country,
+def render_poster(
+    layers: "PosterLayers",
+    *,
+    output_file: str,
+    output_format: str,
     point,
-    dist,
-    output_file,
-    output_format,
-    width=12,
-    height=16,
-    country_label=None,
-    name_label=None,
-    display_city=None,
-    display_country=None,
+    display_city: str,
+    display_country: str,
+    width: float = 12,
+    height: float = 16,
     fonts=None,
-    no_text=False,
-):
+    no_text: bool = False,
+    dpi: int = 300,
+) -> None:
     """
-    Generate a complete map poster with roads, water, parks, and typography.
+    Render one themed poster using a precomputed PosterLayers bundle.
 
-    Creates a high-quality poster by fetching OSM data, rendering map layers,
-    applying the current theme, and adding text labels with coordinates.
+    The active theme is read from the module-level THEME global, which is
+    expected to be set by the caller via load_theme() immediately before.
+    Display names must already be resolved by the caller.
 
     Args:
-        city: City name for display on poster
-        country: Country name for display on poster
-        point: (latitude, longitude) tuple for map center
-        dist: Map radius in meters
-        output_file: Path where poster will be saved
-        output_format: File format ('png', 'svg', or 'pdf')
-        width: Poster width in inches (default: 12)
-        height: Poster height in inches (default: 16)
-        country_label: Optional override for country text on poster
-        _name_label: Optional override for city name (unused, reserved for future use)
-        no_text: If True, skip all text labels and attribution for a clean map
-
-    Raises:
-        RuntimeError: If street network data cannot be retrieved
+        layers: Bundle from PosterLayers.prepare() for the target location.
+        output_file: Path where the poster will be saved.
+        output_format: 'png', 'svg', or 'pdf'.
+        point: (latitude, longitude) tuple — used only for the coord label.
+        display_city: Pre-resolved city name for the poster text.
+        display_country: Pre-resolved country name for the poster text.
+        width, height: Poster size in inches.
+        fonts: Optional custom font dict (see load_fonts).
+        no_text: If True, skip all text labels and attribution.
+        dpi: Output DPI for raster formats. Combined with width/height
+            determines the final pixel resolution.
     """
-    # Handle display names for i18n support
-    # Priority: display_city/display_country > name_label/country_label > city/country
-    display_city = display_city or name_label or city
-    display_country = display_country or country_label or country
-
-    print(f"\nGenerating map for {city}, {country}...")
-
-    # Progress bar for data fetching
-    with tqdm(
-        total=3,
-        desc="Fetching map data",
-        unit="step",
-        bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt}",
-    ) as pbar:
-        # 1. Fetch Street Network
-        pbar.set_description("Downloading street network")
-        compensated_dist = dist * (max(height, width) / min(height, width)) / 4  # To compensate for viewport crop
-        g = fetch_graph(point, compensated_dist)
-        if g is None:
-            raise RuntimeError("Failed to retrieve street network data.")
-        pbar.update(1)
-
-        # 2. Fetch Water Features
-        pbar.set_description("Downloading water features")
-        water = fetch_features(
-            point,
-            compensated_dist,
-            tags={"natural": ["water", "bay", "strait"], "waterway": "riverbank"},
-            name="water",
-        )
-        pbar.update(1)
-
-        # 3. Fetch Parks
-        pbar.set_description("Downloading parks/green spaces")
-        parks = fetch_features(
-            point,
-            compensated_dist,
-            tags={"leisure": "park", "landuse": "grass"},
-            name="parks",
-        )
-        pbar.update(1)
-
-    print("✓ All data retrieved successfully!")
-
-    # 2. Setup Plot
     print("Rendering map...")
     fig, ax = plt.subplots(figsize=(width, height), facecolor=THEME["bg"])
     ax.set_facecolor(THEME["bg"])
     ax.set_position((0.0, 0.0, 1.0, 1.0))
 
-    # Project graph to a metric CRS so distances and aspect are linear (meters)
-    g_proj = ox.project_graph(g)
+    # Polygons: geometries are pre-filtered/projected; only facecolor varies.
+    if layers.water_polys is not None:
+        layers.water_polys.plot(ax=ax, facecolor=THEME["water"], edgecolor="none", zorder=0.5)
+    if layers.parks_polys is not None:
+        layers.parks_polys.plot(ax=ax, facecolor=THEME["parks"], edgecolor="none", zorder=0.8)
 
-    # 3. Plot Layers
-    # Layer 1: Polygons (filter to only plot polygon/multipolygon geometries, not points)
-    if water is not None and not water.empty:
-        # Filter to only polygon/multipolygon geometries to avoid point features showing as dots
-        water_polys = water[water.geometry.type.isin(["Polygon", "MultiPolygon"])]
-        if not water_polys.empty:
-            # Project water features in the same CRS as the graph
-            try:
-                water_polys = ox.projection.project_gdf(water_polys)
-            except Exception:
-                water_polys = water_polys.to_crs(g_proj.graph['crs'])
-            water_polys.plot(ax=ax, facecolor=THEME['water'], edgecolor='none', zorder=0.5)
-
-    if parks is not None and not parks.empty:
-        # Filter to only polygon/multipolygon geometries to avoid point features showing as dots
-        parks_polys = parks[parks.geometry.type.isin(["Polygon", "MultiPolygon"])]
-        if not parks_polys.empty:
-            # Project park features in the same CRS as the graph
-            try:
-                parks_polys = ox.projection.project_gdf(parks_polys)
-            except Exception:
-                parks_polys = parks_polys.to_crs(g_proj.graph['crs'])
-            parks_polys.plot(ax=ax, facecolor=THEME['parks'], edgecolor='none', zorder=0.8)
-    # Layer 2: Roads with hierarchy coloring
+    # Roads: per-edge colors are the only per-theme step.
     print("Applying road hierarchy colors...")
-    edge_colors = get_edge_colors_by_type(g_proj)
-    edge_widths = get_edge_widths_by_type(g_proj)
-
-    # Determine cropping limits to maintain the poster aspect ratio
-    crop_xlim, crop_ylim = get_crop_limits(g_proj, point, fig, compensated_dist)
-    # Plot the projected graph and then apply the cropped limits
     ox.plot_graph(
-        g_proj, ax=ax, bgcolor=THEME['bg'],
+        layers.g_proj, ax=ax, bgcolor=THEME["bg"],
         node_size=0,
-        edge_color=edge_colors,
-        edge_linewidth=edge_widths,
+        edge_color=get_edge_colors_by_type(layers.g_proj),
+        edge_linewidth=layers.edge_widths,
         show=False,
         close=False,
     )
     ax.set_aspect("equal", adjustable="box")
-    ax.set_xlim(crop_xlim)
-    ax.set_ylim(crop_ylim)
+    ax.set_xlim(layers.crop_xlim)
+    ax.set_ylim(layers.crop_ylim)
 
-    # Layer 3: Gradients (Top and Bottom)
-    create_gradient_fade(ax, THEME['gradient_color'], location='bottom', zorder=10)
-    create_gradient_fade(ax, THEME['gradient_color'], location='top', zorder=10)
+    create_gradient_fade(ax, THEME["gradient_color"], location="bottom", zorder=10)
+    create_gradient_fade(ax, THEME["gradient_color"], location="top", zorder=10)
 
     if not no_text:
-        _render_text_labels(
-            ax, point, display_city, display_country, width, height, fonts
-        )
+        _render_text_labels(ax, point, display_city, display_country, width, height, fonts)
 
-    # 5. Save
     print(f"Saving to {output_file}...")
-
+    save_kwargs = dict(facecolor=THEME["bg"], bbox_inches="tight", pad_inches=0.05)
     fmt = output_format.lower()
-    save_kwargs = dict(
-        facecolor=THEME["bg"],
-        bbox_inches="tight",
-        pad_inches=0.05,
-    )
-
-    # DPI matters mainly for raster formats
     if fmt == "png":
-        save_kwargs["dpi"] = 300
-
+        save_kwargs["dpi"] = dpi
     plt.savefig(output_file, format=fmt, **save_kwargs)
-
-    plt.close()
+    plt.close(fig)
     print(f"✓ Done! Poster saved as {output_file}")
 
 
@@ -883,6 +894,33 @@ Examples:
         help="Render the map without city/country/coordinate/attribution labels",
     )
     parser.add_argument(
+        "--dpi",
+        type=int,
+        default=300,
+        help="Output DPI for raster formats (default: 300). 16x9 @ 480 DPI = 8K.",
+    )
+    parser.add_argument(
+        "--parallel",
+        type=int,
+        nargs="?",
+        const=os.cpu_count() or 1,
+        default=1,
+        metavar="N",
+        help=(
+            "Render themes in parallel worker processes. Pass --parallel alone "
+            "to use all available CPU cores, or --parallel N for a specific "
+            "count (default: 1, serial)."
+        ),
+    )
+    parser.add_argument(
+        "--output-dir",
+        "-o",
+        dest="output_dir",
+        default=None,
+        metavar="DIR",
+        help=f"Directory to write posters into (default: {POSTERS_DIR}/).",
+    )
+    parser.add_argument(
         "--display-city",
         "-dc",
         type=str,
@@ -945,11 +983,13 @@ Examples:
     if args.all_themes:
         themes_to_generate = available_themes
     else:
-        if args.theme not in available_themes:
-            print(f"Error: Theme '{args.theme}' not found.")
+        requested = [t.strip() for t in args.theme.split(",") if t.strip()]
+        missing = [t for t in requested if t not in available_themes]
+        if missing:
+            print(f"Error: Theme(s) not found: {', '.join(missing)}")
             print(f"Available themes: {', '.join(available_themes)}")
             sys.exit(1)
-        themes_to_generate = [args.theme]
+        themes_to_generate = requested
 
     print("=" * 50)
     print("City Map Poster Generator")
@@ -972,24 +1012,45 @@ Examples:
         else:
             coords = get_coordinates(args.city, args.country)
 
-        for theme_name in themes_to_generate:
-            THEME = load_theme(theme_name)
-            output_file = generate_output_filename(args.city, theme_name, args.format)
-            create_poster(
-                args.city,
-                args.country,
-                coords,
-                args.distance,
-                output_file,
-                args.format,
-                args.width,
-                args.height,
-                country_label=args.country_label,
-                display_city=args.display_city,
-                display_country=args.display_country,
-                fonts=custom_fonts,
-                no_text=args.no_text,
-            )
+        # Fetch and project OSM layers ONCE for the whole theme batch.
+        print(f"\nPreparing layers for {args.city}, {args.country}...")
+        layers = PosterLayers.prepare(coords, args.distance, args.width, args.height)
+        print("✓ Layers ready.")
+
+        # Resolve display names once; render_poster takes the resolved form.
+        display_city = args.display_city or args.city
+        display_country = args.display_country or args.country_label or args.country
+
+        render_kwargs = {
+            "output_format": args.format,
+            "point": coords,
+            "display_city": display_city,
+            "display_country": display_country,
+            "width": args.width,
+            "height": args.height,
+            "fonts": custom_fonts,
+            "no_text": args.no_text,
+            "dpi": args.dpi,
+        }
+
+        jobs = [
+            (name, generate_output_filename(args.city, name, args.format, args.output_dir))
+            for name in themes_to_generate
+        ]
+
+        if args.parallel > 1:
+            with ProcessPoolExecutor(
+                max_workers=args.parallel,
+                initializer=_worker_init,
+                initargs=(layers, render_kwargs),
+            ) as pool:
+                futures = [pool.submit(_worker_render, name, out) for name, out in jobs]
+                for fut in as_completed(futures):
+                    fut.result()
+        else:
+            for theme_name, output_file in jobs:
+                THEME = load_theme(theme_name)
+                render_poster(layers, output_file=output_file, **render_kwargs)
 
         print("\n" + "=" * 50)
         print("✓ Poster generation complete!")

@@ -227,7 +227,8 @@ python create_map_poster.py -c "Tokyo" -C "Japan" --all-themes
 
 ## Output
 
-Posters are saved to `posters/` directory with format:
+Posters are saved to the `output/` directory by default (override with
+`--output-dir`/`-o`) using the format:
 
 ```text
 {city}_{theme}_{YYYYMMDD_HHMMSS}.png
@@ -265,7 +266,8 @@ map_poster/
 ├── fonts/                  # Font files
 │   ├── Roboto-*.ttf        # Default Roboto fonts
 │   └── cache/              # Downloaded Google Fonts (auto-generated)
-├── posters/                # Generated posters
+├── posters/                # Bundled example poster images (referenced from the README)
+├── output/                 # Generated posters (default --output-dir, gitignored)
 └── README.md
 ```
 
@@ -302,7 +304,8 @@ Quick reference for contributors who want to extend or modify the script.
 | Function | Purpose | Modify when... |
 |----------|---------|----------------|
 | `get_coordinates()` | City → lat/lon via Nominatim | Switching geocoding provider |
-| `create_poster()` | Main rendering pipeline | Adding new map layers |
+| `PosterLayers.prepare()` | Fetch + project theme-independent geometry (one per location) | Adding new map layers |
+| `render_poster()` | Render one themed poster from a PosterLayers bundle | Changing per-theme rendering |
 | `get_edge_colors_by_type()` | Road color by OSM highway tag | Changing road styling |
 | `get_edge_widths_by_type()` | Road width by importance | Adjusting line weights |
 | `create_gradient_fade()` | Top/bottom fade effect | Modifying gradient overlay |
@@ -346,16 +349,15 @@ Script detection uses Unicode ranges (U+0000-U+024F for Latin). If >80% of alpha
 **New map layer (e.g., railways):**
 
 ```python
-# In create_poster(), after parks fetch:
-try:
-    railways = ox.features_from_point(point, tags={'railway': 'rail'}, dist=dist)
-except:
-    railways = None
+# In PosterLayers.prepare(), alongside water/parks:
+railways = fetch_features(point, compensated_dist,
+                           tags={"railway": "rail"}, name="railways")
+# project and store as another field on PosterLayers
 
-# Then plot before roads:
-if railways is not None and not railways.empty:
-    railways = railways.to_crs(g_proj.graph["crs"])
-    railways.plot(ax=ax, color=THEME['railway'], linewidth=0.5, zorder=2.5)
+# Then plot in render_poster(), before the road layer:
+if layers.railway_polys is not None:
+    layers.railway_polys.plot(ax=ax, color=THEME['railway'],
+                               linewidth=0.5, zorder=2.5)
 ```
 
 **New theme property:**
