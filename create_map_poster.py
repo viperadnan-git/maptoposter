@@ -516,22 +516,45 @@ class PosterLayers:
     @classmethod
     def prepare(cls, point, dist, width, height) -> "PosterLayers":
         compensated_dist = dist * (max(height, width) / min(height, width)) / 4
+        lat, lon = point
 
-        g = fetch_graph(point, compensated_dist)
-        if g is None:
-            raise RuntimeError("Failed to retrieve street network data.")
-        water = fetch_features(
-            point, compensated_dist,
-            tags={"natural": ["water", "bay", "strait"], "waterway": "riverbank"},
-            name="water",
-        )
-        parks = fetch_features(
-            point, compensated_dist,
-            tags={"leisure": "park", "landuse": "grass"},
-            name="parks",
-        )
+        with tqdm(
+            total=3, desc="Fetching map data", unit="step",
+            bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt}",
+        ) as pbar:
+            pbar.set_description("Downloading street network")
+            g = fetch_graph(point, compensated_dist)
+            if g is None:
+                raise RuntimeError("Failed to retrieve street network data.")
+            pbar.update(1)
 
-        g_proj = ox.project_graph(g)
+            pbar.set_description("Downloading water features")
+            water = fetch_features(
+                point, compensated_dist,
+                tags={"natural": ["water", "bay", "strait"], "waterway": "riverbank"},
+                name="water",
+            )
+            pbar.update(1)
+
+            pbar.set_description("Downloading parks/green spaces")
+            parks = fetch_features(
+                point, compensated_dist,
+                tags={"leisure": "park", "landuse": "grass"},
+                name="parks",
+            )
+            pbar.update(1)
+
+        proj_key = f"g_proj_{lat}_{lon}_{compensated_dist}"
+        g_proj = cache_get(proj_key)
+        if g_proj is not None:
+            print("✓ Using cached projected graph")
+        else:
+            print("Projecting graph to metric CRS...")
+            g_proj = ox.project_graph(g)
+            try:
+                cache_set(proj_key, g_proj)
+            except CacheError as e:
+                print(e)
 
         def _project_polys(gdf):
             if gdf is None or gdf.empty:
@@ -544,8 +567,10 @@ class PosterLayers:
             except Exception:
                 return polys.to_crs(g_proj.graph["crs"])
 
-        # crop limits depend only on graph extent, centre and figure aspect;
-        # construct a throwaway figure so get_crop_limits can read the aspect
+        water_polys = _project_polys(water)
+        parks_polys = _project_polys(parks)
+
+        edge_widths = get_edge_widths_by_type(g_proj)
         tmp_fig = plt.figure(figsize=(width, height))
         try:
             crop_xlim, crop_ylim = get_crop_limits(g_proj, point, tmp_fig, compensated_dist)
@@ -554,9 +579,9 @@ class PosterLayers:
 
         return cls(
             g_proj=g_proj,
-            water_polys=_project_polys(water),
-            parks_polys=_project_polys(parks),
-            edge_widths=get_edge_widths_by_type(g_proj),
+            water_polys=water_polys,
+            parks_polys=parks_polys,
+            edge_widths=edge_widths,
             compensated_dist=compensated_dist,
             crop_xlim=crop_xlim,
             crop_ylim=crop_ylim,
